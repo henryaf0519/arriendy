@@ -2,11 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { CardComponent } from './components/card/card.component';
-import { CarouselComponent } from './components/carousel/carousel.component';
-import { CategoryComponent } from './components/category/category.component';
 import { FormsModule } from '@angular/forms';
-import { AdminHeaderComponent } from './components/admin-header/admin-header.component';
+import { HeroComponent } from './components/hero/hero.component';
+import { InfoSectionComponent } from './components/info-section/info-section.component';
+
 
 
 
@@ -15,10 +14,8 @@ import { AdminHeaderComponent } from './components/admin-header/admin-header.com
   declarations: [
     HeaderComponent,
     FooterComponent,
-    CardComponent,
-    CarouselComponent,
-    CategoryComponent,
-    AdminHeaderComponent
+    HeroComponent,
+    InfoSectionComponent,
   ],
   imports: [
     CommonModule,
@@ -28,10 +25,8 @@ import { AdminHeaderComponent } from './components/admin-header/admin-header.com
   exports: [
     HeaderComponent,
     FooterComponent,
-    CardComponent,
-    CarouselComponent,
-    CategoryComponent,
-    AdminHeaderComponent
+    HeroComponent,
+    InfoSectionComponent
   ]
 })
 export class SharedModule { }

@@ -8,6 +8,7 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { cartReducer } from './state/cart.reducer';
 import { CartEffects } from './state/cart.effects';
+import { SharedModule } from "./shared/shared.module";
 
 
 @NgModule({
@@ -19,8 +20,9 @@ import { CartEffects } from './state/cart.effects';
     AppRoutingModule,
     StoreModule.forRoot({ cart: cartReducer }),
     EffectsModule.forRoot([CartEffects]),
-    BrowserAnimationsModule
-  ],
+    BrowserAnimationsModule,
+    SharedModule
+],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
