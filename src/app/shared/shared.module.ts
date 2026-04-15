@@ -15,11 +15,11 @@ import { InfoSectionComponent } from './components/info-section/info-section.com
     HeaderComponent,
     FooterComponent,
     HeroComponent,
-    InfoSectionComponent,
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule, 
+    InfoSectionComponent
     
   ],
   exports: [
