@@ -8,6 +8,7 @@ import { InfoSectionComponent } from './components/info-section/info-section.com
 import { ServicesSectionComponent } from './components/services-section/services-section.component';
 import { PlansComponent } from './components/plans/plans.component';
 import { SuraStatsComponent } from './components/sura-stats/sura-stats.component';
+import { DoubtsSectionComponent } from './components/doubts-section/doubts-section.component';
 
 
 
@@ -25,7 +26,8 @@ import { SuraStatsComponent } from './components/sura-stats/sura-stats.component
   imports: [
     CommonModule,
     FormsModule, 
-    InfoSectionComponent
+    InfoSectionComponent,
+    DoubtsSectionComponent
     
   ],
   exports: [
@@ -35,7 +37,8 @@ import { SuraStatsComponent } from './components/sura-stats/sura-stats.component
     InfoSectionComponent,
     ServicesSectionComponent,
     PlansComponent,
-    SuraStatsComponent
+    SuraStatsComponent,
+    DoubtsSectionComponent
   ]
 })
 export class SharedModule { }
