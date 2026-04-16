@@ -5,6 +5,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { HeroComponent } from './components/hero/hero.component';
 import { InfoSectionComponent } from './components/info-section/info-section.component';
+import { ServicesSectionComponent } from './components/services-section/services-section.component';
+import { PlansComponent } from './components/plans/plans.component';
+import { SuraStatsComponent } from './components/sura-stats/sura-stats.component';
 
 
 
@@ -15,6 +18,9 @@ import { InfoSectionComponent } from './components/info-section/info-section.com
     HeaderComponent,
     FooterComponent,
     HeroComponent,
+    ServicesSectionComponent,
+    PlansComponent,
+    SuraStatsComponent,
   ],
   imports: [
     CommonModule,
@@ -26,7 +32,10 @@ import { InfoSectionComponent } from './components/info-section/info-section.com
     HeaderComponent,
     FooterComponent,
     HeroComponent,
-    InfoSectionComponent
+    InfoSectionComponent,
+    ServicesSectionComponent,
+    PlansComponent,
+    SuraStatsComponent
   ]
 })
 export class SharedModule { }
