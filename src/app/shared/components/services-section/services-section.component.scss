@@ -1,0 +1,12 @@
+/* Asegúrate de que el contenedor padre de la imagen tenga esto: */
+.parent-container {
+    position: relative;
+    overflow: visible !important; /* Esto evita que se recorte arriba */
+}
+
+.img-overflow-fix {
+    height: 863px !important;
+    top: -11% !important;
+    width: auto;
+    max-height: none !important; /* Evita que otras clases limiten la altura */
+}

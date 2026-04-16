@@ -53,11 +53,21 @@ export class InfoSectionComponent implements AfterViewInit {
         nextEl: '.btn-next',
         prevEl: '.btn-prev',
       },
-      pagination: {
+     pagination: {
         el: '.swiper-pagination',
         clickable: true,
         renderBullet: (index, className) => {
-          return `<span class="${className} !w-3 !h-3 !bg-gray-300 !opacity-100 !rounded-full !m-0 !relative z-10 transition-all cursor-pointer shadow-[0_0_0_4px_#EDF6F6] [&.swiper-pagination-bullet-active]:!bg-arriendy-teal [&.swiper-pagination-bullet-active]:!w-4 [&.swiper-pagination-bullet-active]:!h-4"></span>`;
+          return `
+            <span class="${className} 
+              !w-[10px] !h-[10px] 
+              !bg-[#AEC7CA] !opacity-100 
+              !rounded-full !m-0 !relative z-10 
+              transition-all cursor-pointer 
+              shadow-[0_0_0_4px_#EDF6F6] 
+              [&.swiper-pagination-bullet-active]:!bg-arriendy-teal 
+              [&.swiper-pagination-bullet-active]:!w-[12px] 
+              [&.swiper-pagination-bullet-active]:!h-[12px]">
+            </span>`;
         },
       },
     };
