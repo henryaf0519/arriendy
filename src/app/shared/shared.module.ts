@@ -13,6 +13,7 @@ import { DoubtsSectionComponent } from './components/doubts-section/doubts-secti
 import { BenefitsComponent } from './components/benefits/benefits.component';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { PeopleComponent } from './components/people/people.component';
+import { StrategicAllianceComponent } from './components/strategic-alliance/strategic-alliance.component';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
@@ -34,7 +35,8 @@ import { RouterModule } from '@angular/router';
     DoubtsSectionComponent,
     BenefitsComponent,
     AboutusComponent,
-    PeopleComponent
+    PeopleComponent,
+    StrategicAllianceComponent
   ],
   exports: [
     HeaderComponent,
@@ -48,7 +50,8 @@ import { RouterModule } from '@angular/router';
     DoubtsSectionComponent,
     BenefitsComponent,
     AboutusComponent,
-    PeopleComponent
+    PeopleComponent,
+    StrategicAllianceComponent
   ],
 })
 export class SharedModule {}
