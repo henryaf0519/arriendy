@@ -1,9 +1,10 @@
-<div class="w-full flex flex-col lg:flex-row items-stretch font-sans h-[492px] overflow-hidden relative">
+<div #statsSection class="w-full flex flex-col lg:flex-row items-stretch font-sans h-[492px] overflow-hidden relative">
   
   <div class="w-full lg:w-1/2 h-full">
     <img src="assets/imgs/bakery.svg" 
          alt="Respaldo SURA" 
-         class="w-full h-full object-fill object-center"> </div>
+         class="w-full h-full object-fill object-center"> 
+  </div>
 
   <div class="w-full lg:w-1/2  py-12 lg:py-16 px-6 lg:pl-4 lg:pr-20 flex flex-col justify-center relative h-full lg:-ml-16 z-10">
     
@@ -18,26 +19,31 @@
 
     <div class="space-y-4 max-w-md z-0 relative">
       
-      <div class="flex items-center p-6 lg:p-7 bg-white border border-[#00D1FF] rounded-[20px] shadow-[0_0_15px_rgba(0,209,255,0.15)]">
-        <div class="text-[40px] lg:text-[48px] font-extrabold text-[#2D4A5E] leading-none mr-4">
-          +51.000
+      @for (stat of stats; track stat.title) {
+        <div class="flex items-center p-6 lg:p-7 bg-white rounded-[20px]"
+             [class]="stat.isHighlighted 
+                      ? 'border border-[#00D1FF] shadow-[0_0_15px_rgba(0,209,255,0.15)]' 
+                      : 'border border-gray-100 shadow-sm'">
+                      
+          <div class="text-[40px] lg:text-[48px] font-extrabold leading-none mr-4"
+               [class]="stat.isHighlighted ? 'text-[#2D4A5E]' : 'text-[#00A99D]'">
+            +{{ stat.displayNumber }}
+          </div>
+          
+          <div class="flex flex-col border-l border-gray-200 pl-4 lg:pl-6">
+            <span class="text-[17px] lg:text-[19px] font-bold text-[#2D4A5E] leading-tight">
+              {{ stat.title }}
+            </span>
+            <span [class]="stat.isHighlighted 
+                           ? 'text-[15px] text-gray-400' 
+                           : 'text-[16px] text-[#003366] font-semibold'">
+              {{ stat.subtitle }}
+            </span>
+          </div>
+          
         </div>
-        <div class="flex flex-col border-l border-gray-200 pl-4 lg:pl-6">
-          <span class="text-[17px] lg:text-[19px] font-bold text-[#2D4A5E] leading-tight">Propietarios e Inversionistas</span>
-          <span class="text-[15px] text-gray-400">protegidos</span>
-        </div>
-      </div>
-
-      <div class="flex items-center p-6 lg:p-7 bg-white border border-gray-100 rounded-[20px] shadow-sm">
-        <div class="text-[40px] lg:text-[48px] font-extrabold text-[#00A99D] leading-none mr-4">
-          +88.000
-        </div>
-        <div class="flex flex-col border-l border-gray-200 pl-4 lg:pl-6">
-          <span class="text-[17px] lg:text-[19px] font-bold text-[#2D4A5E] leading-tight">Contratos de arrendamiento</span>
-          <span class="text-[16px] text-[#003366] font-semibold">asegurados</span>
-        </div>
-      </div>
-
+      }
+      
     </div>
   </div>
 </div>
