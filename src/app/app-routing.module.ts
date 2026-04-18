@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'renovacion', 
     loadChildren: () => import('./modules/renovacion/renovacion.module').then(m => m.RenovacionModule) 
   },
+  { 
+    path: 'soporte', 
+    loadChildren: () => import('./modules/support/support.module').then(m => m.SupportModule) 
+  },
   { path: '**', redirectTo: '/main' } 
 ];
 
