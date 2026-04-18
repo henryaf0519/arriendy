@@ -21,7 +21,7 @@ import { SharedModule } from "./shared/shared.module";
     StoreModule.forRoot({ cart: cartReducer }),
     EffectsModule.forRoot([CartEffects]),
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
 ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [

@@ -9,6 +9,7 @@ import { ServicesSectionComponent } from './components/services-section/services
 import { PlansComponent } from './components/plans/plans.component';
 import { SuraStatsComponent } from './components/sura-stats/sura-stats.component';
 import { DoubtsSectionComponent } from './components/doubts-section/doubts-section.component';
+import { RouterModule } from '@angular/router'
 
 
 
@@ -26,8 +27,9 @@ import { DoubtsSectionComponent } from './components/doubts-section/doubts-secti
   imports: [
     CommonModule,
     FormsModule, 
+    RouterModule,
     InfoSectionComponent,
-    DoubtsSectionComponent
+    DoubtsSectionComponent,
     
   ],
   exports: [

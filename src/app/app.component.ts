@@ -1,6 +1,7 @@
 import { Component,OnInit  } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { loadCartState } from './state/cart.actions';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,10 @@ import { loadCartState } from './state/cart.actions';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  constructor(private store: Store) {}
+  constructor(
+    private store: Store,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     const savedCart = localStorage.getItem('cart-state');
@@ -17,5 +21,6 @@ export class AppComponent implements OnInit {
       const cartState = JSON.parse(savedCart);
       this.store.dispatch(loadCartState({ items: cartState.items }));
     }
+    this.router.navigate(['/main']);
   }
 }

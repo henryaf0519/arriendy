@@ -1,53 +1,24 @@
-<header class="absolute top-0 left-0 z-50 w-full">
-  <div
-    class="max-w-7xl mx-auto flex items-center justify-between bg-white rounded-r-3xl rounded-bl-3xl px-8 py-4 shadow-sm wh"
-  >
+<header class="fixed top-0 left-0 z-50 w-full transition-all duration-300">
+  <div class="max-w-7xl mx-auto flex items-center w-[770px] justify-between bg-white rounded-b-[40px] px-8 py-4 shadow-md">
+    
     <div class="flex items-center space-x-6 border-ui-border pr-6">
-      <img src="assets/imgs/arriendy.svg" alt="Arriendy" class="h-8" />
+      <img src="assets/imgs/arriendy.svg" alt="Arriendy" class="h-8 cursor-pointer" [routerLink]="['/main']" />
       <div class="h-8 w-px bg-ui-border"></div>
       <img src="assets/imgs/sura.svg" alt="Sura" class="h-6" />
     </div>
 
     <nav class="hidden md:flex items-center space-x-8">
-      <a
-        href="#"
-        class="text-secondary font-semibold"
-      >
-        Inicio
-      </a>
+      <a routerLink="/main" routerLinkActive="text-secondary font-bold" [routerLinkActiveOptions]="{ exact: true }" class="text-gray hover:text-blueMain transition-colors font-semibold">Inicio</a>
+      <a routerLink="/coberturas" routerLinkActive="text-secondary font-bold" class="text-gray hover:text-blueMain transition-colors font-semibold">Coberturas</a>
+      <a routerLink="/nosotros" routerLinkActive="text-secondary font-bold" class="text-gray hover:text-blueMain transition-colors font-semibold">Nosotros</a>
+      <a routerLink="/renovacion" routerLinkActive="text-secondary font-bold" class="text-gray hover:text-blueMain transition-colors font-semibold">Renovación</a>
 
-      <a href="#" class="text-gray hover:text-blueMain transition-colors"
-        >Coberturas</a
-      >
-      <a href="#" class="text-gray hover:text-blueMain transition-colors"
-        >Nosotros</a
-      >
-      <a href="#" class="text-gray hover:text-blueMain transition-colors"
-        >Renovación</a
-      >
-
-      <button class="text-gray hover:text-blueMain transition-colors">
-        <img src="assets/imgs/headPhones.svg" alt="Sura" class="h-6" />
+      <button class="text-gray hover:text-blueMain transition-colors flex items-center">
+        <img src="assets/imgs/headPhones.svg" alt="Soporte" class="h-6" />
       </button>
     </nav>
 
     <div class="md:hidden">
-      <button class="text-gray hover:text-blueMain">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h16m-7 6h7"
-          />
-        </svg>
-      </button>
-    </div>
+      </div>
   </div>
 </header>
