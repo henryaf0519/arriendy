@@ -7,6 +7,7 @@ import { HeroComponent } from './components/hero/hero.component';
 import { InfoSectionComponent } from './components/info-section/info-section.component';
 import { ServicesSectionComponent } from './components/services-section/services-section.component';
 import { PlansComponent } from './components/plans/plans.component';
+import { PlansCoveragesComponent } from './components/plans-coverages/plans-coverages.component';
 import { SuraStatsComponent } from './components/sura-stats/sura-stats.component';
 import { DoubtsSectionComponent } from './components/doubts-section/doubts-section.component';
 import { RouterModule } from '@angular/router'
@@ -22,6 +23,7 @@ import { RouterModule } from '@angular/router'
     HeroComponent,
     ServicesSectionComponent,
     PlansComponent,
+    PlansCoveragesComponent,
     SuraStatsComponent,
   ],
   imports: [
@@ -39,6 +41,7 @@ import { RouterModule } from '@angular/router'
     InfoSectionComponent,
     ServicesSectionComponent,
     PlansComponent,
+    PlansCoveragesComponent,
     SuraStatsComponent,
     DoubtsSectionComponent
   ]
