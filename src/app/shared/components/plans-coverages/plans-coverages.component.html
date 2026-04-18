@@ -1,172 +1,195 @@
-  <div class="relative w-full min-h-screen">
-    
-    <div class="absolute top-0 left-0 w-full h-[435px] md:h-[435px] z-0">
-    
+<div class="relative w-full min-h-screen">
+
+  <div class="absolute top-0 left-0 w-full h-[435px] md:h-[435px] z-0">
+
     <img src="assets/imgs/bluesmBG.svg" class="absolute top-0 left-0 w-full h-full object-cover" alt="Fondo Azul" />
 
-    <img src="assets/imgs/palm.svg" class="absolute top-[0] right-0 w-[200px] md:w-[320px] h-auto object-contain object-right" alt="Palmera" />
+    <img src="assets/imgs/palm.svg"
+      class="absolute top-[0] right-0 w-[200px] md:w-[320px] h-auto object-contain object-right" alt="Palmera" />
 
   </div>
 
-    <div class="relative z-10 max-w-6xl mx-auto px-4 py-12 mb-32 font-sans text-[#2D4A5E]">
-      
-      <div class="text-center mb-[83px] mt-[83px] text-white">
-        <h2 class="text-3xl font-bold mb-2">Elige el plan que más se acomode a ti</h2>
-        <p class="text-gray-200 text-sm">Proteger tu patrimonio nunca fue tan sencillo y transparente.<br> Compara nuestras opciones y asegura tu tranquilidad.</p>
-      </div>
+  <div class="relative z-10 max-w-6xl mx-auto px-4 py-12 mb-32 font-sans text-[#2D4A5E]">
 
-      <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg p-8 mb-12 text-center border border-gray-50">
-        <h4 class="text-[11px] font-bold tracking-widest uppercase mb-4 text-[#2D4A5E]">¿Qué es lo más importante para ti hoy?</h4>
-        <div class="grid grid-cols-3 gap-2 bg-gray-50 p-1 rounded-xl">
-          
-          <button (click)="selectPlan('esencial')"
-            [ngClass]="planSeleccionado === 'esencial' ? 'bg-[#4FC0B0] text-white shadow-md' : 'bg-white text-[#2D4A5E] hover:bg-gray-100'"
-            class="py-3 px-2 text-xs font-bold rounded-lg border border-gray-100 transition-all duration-300">
-            Solo lo esencial
-          </button>
+    <div class="text-center mb-[83px] mt-[83px] text-white">
+      <h2 class="text-3xl font-bold mb-2">Elige el plan que más se acomode a ti</h2>
+      <p class="text-gray-200 text-sm">Proteger tu patrimonio nunca fue tan sencillo y transparente.<br> Compara
+        nuestras opciones y asegura tu tranquilidad.</p>
+    </div>
 
-          <button (click)="selectPlan('balance')"
-            [ngClass]="planSeleccionado === 'balance' ? 'bg-[#4FC0B0] text-white shadow-md' : 'bg-white text-[#2D4A5E] hover:bg-gray-100'"
-            class="py-3 px-2 text-xs font-bold rounded-lg border border-gray-100 transition-all duration-300">
-            Balance ideal
-          </button>
+    <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg p-8 mb-12 text-center border border-gray-50">
+      <h4 class="text-[11px] font-bold tracking-widest uppercase mb-4 text-[#2D4A5E]">¿Qué es lo más importante para ti
+        hoy?</h4>
+      <div class="grid grid-cols-3 gap-2 bg-gray-50 p-1 rounded-xl">
 
-          <button (click)="selectPlan('cero')"
-            [ngClass]="planSeleccionado === 'cero' ? 'bg-[#4FC0B0] text-white shadow-md' : 'bg-white text-[#2D4A5E] hover:bg-gray-100'"
-            class="py-3 px-2 text-xs font-bold rounded-lg border border-gray-100 transition-all duration-300">
-            Cero preocupaciones
-          </button>
-          
-        </div>
-      </div>
+        <button (click)="selectPlan('esencial')"
+          [ngClass]="planSeleccionado === 'esencial' ? 'bg-[#4FC0B0] text-white shadow-md' : 'bg-white text-[#2D4A5E] hover:bg-gray-100'"
+          class="py-3 px-2 text-xs font-bold rounded-lg border border-gray-100 transition-all duration-300">
+          Solo lo esencial
+        </button>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
-        
-        <div [ngClass]="{
-            'border-[#4FC0B0] border-2 scale-105 shadow-2xl z-20': planSeleccionado === 'esencial',
-            'opacity-80 grayscale-[20%] scale-95': planSeleccionado !== 'esencial'
-          }"
-          class="bg-white rounded-3xl p-8 border border-gray-100 flex flex-col transition-all duration-500 cursor-pointer"
-          (click)="selectPlan('esencial')">
-          
-          <div class="flex items-center gap-4 mb-6">
-            <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-3xl">💎</div>
-            <div>
-              <span class="text-[10px] uppercase tracking-widest text-gray-400 font-bold">Plan Básico</span>
-              <h3 class="text-2xl font-bold">Esencial</h3>
-              <p class="text-xs text-gray-400">Protección básica</p>
-            </div>
-          </div>
-          
-          <ul class="space-y-4 mb-8 flex-grow">
-            <li class="flex items-center gap-3 text-[13px] font-medium"><span class="text-blue-500">✓</span> Canon de arrendamiento</li>
-            <li class="flex items-center gap-3 text-[13px] font-medium"><span class="text-blue-500">✓</span> Cuota administración</li>
-            <li class="flex items-center gap-3 text-[13px] font-medium text-gray-300"><span>✕</span> Servicios públicos</li>
-            <li class="flex items-start gap-3 text-[13px] font-medium"><span class="text-blue-500">✓</span> Límite de indemnización: Hasta vigencia de la póliza</li>
-          </ul>
+        <button (click)="selectPlan('balance')"
+          [ngClass]="planSeleccionado === 'balance' ? 'bg-[#4FC0B0] text-white shadow-md' : 'bg-white text-[#2D4A5E] hover:bg-gray-100'"
+          class="py-3 px-2 text-xs font-bold rounded-lg border border-gray-100 transition-all duration-300">
+          Balance ideal
+        </button>
 
-          <div class="border-t border-gray-100 pt-6 mb-8">
-            <h5 class="text-[10px] font-extrabold uppercase tracking-widest mb-4">Coberturas Opcionales</h5>
-            <div class="flex items-center gap-3 text-[13px] font-bold text-blue-600"><span>+</span> Asistencia domiciliaria</div>
-          </div>
-
-          <div class="mt-auto">
-            <p class="text-[10px] text-gray-400 italic mb-4">Tomador: Propietario<br>Máximo valor del canon COP$: Sin límite</p>
-            <button [ngClass]="planSeleccionado === 'esencial' ? 'bg-[#4FC0B0]' : 'bg-[#BCC3CF]'"
-              class="w-full text-white font-bold py-4 rounded-xl mb-3 transition-colors duration-300">
-              Cotizar seguro
-            </button>
-            <p class="text-[10px] text-blue-500 text-center font-medium">Pago único por la vigencia de tu contrato</p>
-          </div>
-        </div>
-
-        <div [ngClass]="{
-            'border-[#4FC0B0] border-2 scale-105 shadow-2xl z-20 bg-[#F8FFFF]': planSeleccionado === 'balance',
-            'opacity-80 grayscale-[20%] scale-95 bg-white': planSeleccionado !== 'balance'
-          }"
-          class="rounded-3xl p-8 border border-gray-100 flex flex-col relative transition-all duration-500 cursor-pointer"
-          (click)="selectPlan('balance')">
-          
-          <div *ngIf="planSeleccionado === 'balance'" 
-              class="absolute -top-4 right-8 bg-[#4FC0B0] text-white text-[9px] font-bold px-4 py-1.5 rounded-full tracking-widest animate-bounce">
-              MÁS ELEGIDO
-          </div>
-          
-          <div class="flex items-center gap-4 mb-6">
-            <div class="w-16 h-16 bg-teal-50 rounded-2xl flex items-center justify-center text-3xl">🛡️</div>
-            <div>
-              <span class="text-[10px] uppercase tracking-widest text-[#4FC0B0] font-bold">Plan Clásico</span>
-              <h3 class="text-2xl font-bold">Protección PLUS</h3>
-              <p class="text-xs text-gray-400">Más respaldo</p>
-            </div>
-          </div>
-          
-          <ul class="space-y-4 mb-8 flex-grow">
-            <li class="flex items-center gap-3 text-[13px] font-medium"><span class="text-blue-500">✓</span> Canon de arrendamiento</li>
-            <li class="flex items-center gap-3 text-[13px] font-medium"><span class="text-blue-500">✓</span> Cuota administración</li>
-            <li class="flex items-center gap-3 text-[13px] font-medium"><span class="text-blue-500">✓</span> Servicios públicos</li>
-            <li class="flex items-start gap-3 text-[13px] font-medium"><span class="text-blue-500">✓</span> Límite de indemnización: <span class="font-bold">12 meses</span></li>
-          </ul>
-
-          <div class="border-t border-[#DDEFEF] pt-6 mb-8">
-            <h5 class="text-[10px] font-extrabold uppercase tracking-widest mb-4">Coberturas Opcionales</h5>
-            <div class="space-y-3">
-              <div class="flex items-center gap-3 text-[13px] font-bold text-blue-600"><span>+</span> Asistencia domiciliaria</div>
-              <div class="flex items-center gap-3 text-[13px] font-bold text-blue-600"><span>+</span> Daños y faltantes</div>
-            </div>
-          </div>
-
-          <div class="mt-auto">
-            <p class="text-[10px] text-gray-400 italic mb-4">Tomador: Propietario<br>Máximo valor del canon COP$: Sin límite</p>
-            <button [ngClass]="planSeleccionado === 'balance' ? 'bg-[#4FC0B0]' : 'bg-[#BCC3CF]'"
-              class="w-full text-white font-bold py-4 rounded-xl mb-3 transition-colors duration-300">
-              Cotizar seguro
-            </button>
-            <p class="text-[10px] text-blue-500 text-center font-medium">Pago único por la vigencia de tu contrato</p>
-          </div>
-        </div>
-
-        <div [ngClass]="{
-            'border-[#4FC0B0] border-2 scale-105 shadow-2xl z-20': planSeleccionado === 'cero',
-            'opacity-80 grayscale-[20%] scale-95': planSeleccionado !== 'cero'
-          }"
-          class="bg-white rounded-3xl p-8 border border-gray-100 flex flex-col transition-all duration-500 cursor-pointer"
-          (click)="selectPlan('cero')">
-          
-          <div class="flex items-center gap-4 mb-6">
-            <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-3xl">💎</div>
-            <div>
-              <span class="text-[10px] uppercase tracking-widest text-[#4FC0B0] font-bold">Plan Global</span>
-              <h3 class="text-2xl font-bold">Tranquilidad 360°</h3>
-              <p class="text-xs text-gray-400">Todo incluido</p>
-            </div>
-          </div>
-          
-          <ul class="space-y-4 mb-8 flex-grow">
-            <li class="flex items-center gap-3 text-[13px] font-medium"><span class="text-blue-500">✓</span> Canon de arrendamiento</li>
-            <li class="flex items-center gap-3 text-[13px] font-medium"><span class="text-blue-500">✓</span> Cuota administración</li>
-            <li class="flex items-center gap-3 text-[13px] font-medium"><span class="text-blue-500">✓</span> Servicios públicos</li>
-            <li class="flex items-start gap-3 text-[13px] font-medium"><span class="text-blue-500">✓</span> Límite de indemnización: <span class="font-bold">36 meses</span></li>
-          </ul>
-
-          <div class="border-t border-gray-100 pt-6 mb-8">
-            <h5 class="text-[10px] font-extrabold uppercase tracking-widest mb-4">Coberturas Opcionales</h5>
-            <div class="space-y-3">
-              <div class="flex items-center gap-3 text-[13px] font-bold text-blue-600"><span>+</span> Asistencia domiciliaria</div>
-              <div class="flex items-center gap-3 text-[13px] font-bold text-blue-600"><span>+</span> Daños y faltantes</div>
-            </div>
-          </div>
-
-          <div class="mt-auto">
-            <p class="text-[10px] text-gray-400 italic mb-4">Tomador: Propietario<br>Máximo valor del canon COP$: Sin límite</p>
-            <button [ngClass]="planSeleccionado === 'cero' ? 'bg-[#4FC0B0]' : 'bg-[#BCC3CF]'"
-              class="w-full text-white font-bold py-4 rounded-xl mb-3 transition-colors duration-300">
-              Cotizar seguro
-            </button>
-            <p class="text-[10px] text-blue-500 text-center font-medium">Pago único por la vigencia de tu contrato</p>
-          </div>
-        </div>
+        <button (click)="selectPlan('cero')"
+          [ngClass]="planSeleccionado === 'cero' ? 'bg-[#4FC0B0] text-white shadow-md' : 'bg-white text-[#2D4A5E] hover:bg-gray-100'"
+          class="py-3 px-2 text-xs font-bold rounded-lg border border-gray-100 transition-all duration-300">
+          Cero preocupaciones
+        </button>
 
       </div>
     </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+
+      <div [ngClass]="{
+            'border-[#4FC0B0] border-2 scale-105 shadow-2xl z-20': planSeleccionado === 'esencial',
+            'opacity-80 grayscale-[20%] scale-95': planSeleccionado !== 'esencial'
+          }"
+        class="bg-white rounded-3xl p-8 border border-gray-100 flex flex-col transition-all duration-500 cursor-pointer"
+        (click)="selectPlan('esencial')">
+
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-3xl">💎</div>
+          <div>
+            <span class="text-[10px] uppercase tracking-widest text-gray-400 font-bold">Plan Básico</span>
+            <h3 class="text-2xl font-bold">Esencial</h3>
+            <p class="text-xs text-gray-400">Protección básica</p>
+          </div>
+        </div>
+
+        <ul class="space-y-4 mb-8 flex-grow">
+          <li class="flex items-center gap-3 text-[13px] font-medium"><span class="text-blue-500">✓</span> Canon de
+            arrendamiento</li>
+          <li class="flex items-center gap-3 text-[13px] font-medium"><span class="text-blue-500">✓</span> Cuota
+            administración</li>
+          <li class="flex items-center gap-3 text-[13px] font-medium text-gray-300"><span>✕</span> Servicios públicos
+          </li>
+          <li class="flex items-start gap-3 text-[13px] font-medium"><span class="text-blue-500">✓</span> Límite de
+            indemnización: Hasta vigencia de la póliza</li>
+        </ul>
+
+        <div class="border-t border-gray-100 pt-6 mb-8">
+          <h5 class="text-[10px] font-extrabold uppercase tracking-widest mb-4">Coberturas Opcionales</h5>
+          <div class="flex items-center gap-3 text-[13px] font-bold text-blue-600"><span>+</span> Asistencia
+            domiciliaria</div>
+        </div>
+
+        <div class="mt-auto">
+          <p class="text-[10px] text-gray-400 italic mb-4">Tomador: Propietario<br>Máximo valor del canon COP$: Sin
+            límite</p>
+          <button [ngClass]="planSeleccionado === 'esencial' ? 'bg-[#4FC0B0]' : 'bg-[#BCC3CF]'"
+            class="w-full text-white font-bold py-4 rounded-xl mb-3 transition-colors duration-300">
+            Cotizar seguro
+          </button>
+          <p class="text-[10px] text-blue-500 text-center font-medium">Pago único por la vigencia de tu contrato</p>
+        </div>
+      </div>
+
+      <div [ngClass]="{
+            'border-[#4FC0B0] border-2 scale-105 shadow-2xl z-20 bg-[#F8FFFF]': planSeleccionado === 'balance',
+            'opacity-80 grayscale-[20%] scale-95 bg-white': planSeleccionado !== 'balance'
+          }"
+        class="rounded-3xl p-8 border border-gray-100 flex flex-col relative transition-all duration-500 cursor-pointer"
+        (click)="selectPlan('balance')">
+
+        <div *ngIf="planSeleccionado === 'balance'"
+          class="absolute -top-4 right-8 bg-[#4FC0B0] text-white text-[9px] font-bold px-4 py-1.5 rounded-full tracking-widest animate-bounce">
+          MÁS ELEGIDO
+        </div>
+
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-16 h-16 bg-teal-50 rounded-2xl flex items-center justify-center text-3xl">🛡️</div>
+          <div>
+            <span class="text-[10px] uppercase tracking-widest text-[#4FC0B0] font-bold">Plan Clásico</span>
+            <h3 class="text-2xl font-bold">Protección PLUS</h3>
+            <p class="text-xs text-gray-400">Más respaldo</p>
+          </div>
+        </div>
+
+        <ul class="space-y-4 mb-8 flex-grow">
+          <li class="flex items-center gap-3 text-[13px] font-medium"><span class="text-blue-500">✓</span> Canon de
+            arrendamiento</li>
+          <li class="flex items-center gap-3 text-[13px] font-medium"><span class="text-blue-500">✓</span> Cuota
+            administración</li>
+          <li class="flex items-center gap-3 text-[13px] font-medium"><span class="text-blue-500">✓</span> Servicios
+            públicos</li>
+          <li class="flex items-start gap-3 text-[13px] font-medium"><span class="text-blue-500">✓</span> Límite de
+            indemnización: <span class="font-bold">12 meses</span></li>
+        </ul>
+
+        <div class="border-t border-[#DDEFEF] pt-6 mb-8">
+          <h5 class="text-[10px] font-extrabold uppercase tracking-widest mb-4">Coberturas Opcionales</h5>
+          <div class="space-y-3">
+            <div class="flex items-center gap-3 text-[13px] font-bold text-blue-600"><span>+</span> Asistencia
+              domiciliaria</div>
+            <div class="flex items-center gap-3 text-[13px] font-bold text-blue-600"><span>+</span> Daños y faltantes
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-auto">
+          <p class="text-[10px] text-gray-400 italic mb-4">Tomador: Propietario<br>Máximo valor del canon COP$: Sin
+            límite</p>
+          <button [ngClass]="planSeleccionado === 'balance' ? 'bg-[#4FC0B0]' : 'bg-[#BCC3CF]'"
+            class="w-full text-white font-bold py-4 rounded-xl mb-3 transition-colors duration-300">
+            Cotizar seguro
+          </button>
+          <p class="text-[10px] text-blue-500 text-center font-medium">Pago único por la vigencia de tu contrato</p>
+        </div>
+      </div>
+
+      <div [ngClass]="{
+            'border-[#4FC0B0] border-2 scale-105 shadow-2xl z-20': planSeleccionado === 'cero',
+            'opacity-80 grayscale-[20%] scale-95': planSeleccionado !== 'cero'
+          }"
+        class="bg-white rounded-3xl p-8 border border-gray-100 flex flex-col transition-all duration-500 cursor-pointer"
+        (click)="selectPlan('cero')">
+
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-3xl">💎</div>
+          <div>
+            <span class="text-[10px] uppercase tracking-widest text-[#4FC0B0] font-bold">Plan Global</span>
+            <h3 class="text-2xl font-bold">Tranquilidad 360°</h3>
+            <p class="text-xs text-gray-400">Todo incluido</p>
+          </div>
+        </div>
+
+        <ul class="space-y-4 mb-8 flex-grow">
+          <li class="flex items-center gap-3 text-[13px] font-medium"><span class="text-blue-500">✓</span> Canon de
+            arrendamiento</li>
+          <li class="flex items-center gap-3 text-[13px] font-medium"><span class="text-blue-500">✓</span> Cuota
+            administración</li>
+          <li class="flex items-center gap-3 text-[13px] font-medium"><span class="text-blue-500">✓</span> Servicios
+            públicos</li>
+          <li class="flex items-start gap-3 text-[13px] font-medium"><span class="text-blue-500">✓</span> Límite de
+            indemnización: <span class="font-bold">36 meses</span></li>
+        </ul>
+
+        <div class="border-t border-gray-100 pt-6 mb-8">
+          <h5 class="text-[10px] font-extrabold uppercase tracking-widest mb-4">Coberturas Opcionales</h5>
+          <div class="space-y-3">
+            <div class="flex items-center gap-3 text-[13px] font-bold text-blue-600"><span>+</span> Asistencia
+              domiciliaria</div>
+            <div class="flex items-center gap-3 text-[13px] font-bold text-blue-600"><span>+</span> Daños y faltantes
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-auto">
+          <p class="text-[10px] text-gray-400 italic mb-4">Tomador: Propietario<br>Máximo valor del canon COP$: Sin
+            límite</p>
+          <button [ngClass]="planSeleccionado === 'cero' ? 'bg-[#4FC0B0]' : 'bg-[#BCC3CF]'"
+            class="w-full text-white font-bold py-4 rounded-xl mb-3 transition-colors duration-300">
+            Cotizar seguro
+          </button>
+          <p class="text-[10px] text-blue-500 text-center font-medium">Pago único por la vigencia de tu contrato</p>
+        </div>
+      </div>
+
+    </div>
   </div>
+</div>

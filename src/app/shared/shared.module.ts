@@ -11,6 +11,8 @@ import { PlansCoveragesComponent } from './components/plans-coverages/plans-cove
 import { SuraStatsComponent } from './components/sura-stats/sura-stats.component';
 import { DoubtsSectionComponent } from './components/doubts-section/doubts-section.component';
 import { BenefitsComponent } from './components/benefits/benefits.component';
+import { AboutusComponent } from './components/aboutus/aboutus.component';
+import { PeopleComponent } from './components/people/people.component';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
@@ -30,7 +32,9 @@ import { RouterModule } from '@angular/router';
     RouterModule,
     InfoSectionComponent,
     DoubtsSectionComponent,
-    BenefitsComponent
+    BenefitsComponent,
+    AboutusComponent,
+    PeopleComponent
   ],
   exports: [
     HeaderComponent,
@@ -43,6 +47,8 @@ import { RouterModule } from '@angular/router';
     SuraStatsComponent,
     DoubtsSectionComponent,
     BenefitsComponent,
+    AboutusComponent,
+    PeopleComponent
   ],
 })
 export class SharedModule {}
