@@ -14,6 +14,7 @@ import { BenefitsComponent } from './components/benefits/benefits.component';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { PeopleComponent } from './components/people/people.component';
 import { StrategicAllianceComponent } from './components/strategic-alliance/strategic-alliance.component';
+import { WhySimpleComponent } from './components/why-simple/why-simple.component';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
@@ -36,7 +37,8 @@ import { RouterModule } from '@angular/router';
     BenefitsComponent,
     AboutusComponent,
     PeopleComponent,
-    StrategicAllianceComponent
+    StrategicAllianceComponent,
+    WhySimpleComponent
   ],
   exports: [
     HeaderComponent,
@@ -51,7 +53,8 @@ import { RouterModule } from '@angular/router';
     BenefitsComponent,
     AboutusComponent,
     PeopleComponent,
-    StrategicAllianceComponent
+    StrategicAllianceComponent,
+    WhySimpleComponent
   ],
 })
 export class SharedModule {}
