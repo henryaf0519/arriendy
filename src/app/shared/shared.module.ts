@@ -10,11 +10,8 @@ import { PlansComponent } from './components/plans/plans.component';
 import { PlansCoveragesComponent } from './components/plans-coverages/plans-coverages.component';
 import { SuraStatsComponent } from './components/sura-stats/sura-stats.component';
 import { DoubtsSectionComponent } from './components/doubts-section/doubts-section.component';
-import { RouterModule } from '@angular/router'
-
-
-
-
+import { BenefitsComponent } from './components/benefits/benefits.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -25,14 +22,15 @@ import { RouterModule } from '@angular/router'
     PlansComponent,
     PlansCoveragesComponent,
     SuraStatsComponent,
+    
   ],
   imports: [
     CommonModule,
-    FormsModule, 
+    FormsModule,
     RouterModule,
     InfoSectionComponent,
     DoubtsSectionComponent,
-    
+    BenefitsComponent
   ],
   exports: [
     HeaderComponent,
@@ -43,7 +41,8 @@ import { RouterModule } from '@angular/router'
     PlansComponent,
     PlansCoveragesComponent,
     SuraStatsComponent,
-    DoubtsSectionComponent
-  ]
+    DoubtsSectionComponent,
+    BenefitsComponent,
+  ],
 })
-export class SharedModule { }
+export class SharedModule {}
