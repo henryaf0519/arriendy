@@ -15,6 +15,8 @@ import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { PeopleComponent } from './components/people/people.component';
 import { StrategicAllianceComponent } from './components/strategic-alliance/strategic-alliance.component';
 import { WhySimpleComponent } from './components/why-simple/why-simple.component';
+import { TargetAudienceComponent } from './components/target-audience/target-audience.component';
+import { InsuranceHeroComponent } from './components/insurance-hero/insurance-hero.component';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
@@ -38,7 +40,9 @@ import { RouterModule } from '@angular/router';
     AboutusComponent,
     PeopleComponent,
     StrategicAllianceComponent,
-    WhySimpleComponent
+    WhySimpleComponent,
+    TargetAudienceComponent,
+    InsuranceHeroComponent
   ],
   exports: [
     HeaderComponent,
@@ -54,7 +58,9 @@ import { RouterModule } from '@angular/router';
     AboutusComponent,
     PeopleComponent,
     StrategicAllianceComponent,
-    WhySimpleComponent
+    WhySimpleComponent,
+    TargetAudienceComponent,
+    InsuranceHeroComponent
   ],
 })
 export class SharedModule {}
