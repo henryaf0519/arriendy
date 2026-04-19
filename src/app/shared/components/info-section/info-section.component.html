@@ -35,7 +35,7 @@
   </div>
 
   <div class="mt-20 bg-third relative min-h-[655px] flex flex-col items-center pt-20 ">
-    <div class="absolute bottom-0 left-0  hidden lg:block z-0">
+    <div class="absolute bottom-0 left-0 hidden lg:block z-0">
       <img src="assets/imgs/home.png" alt="Edificio" class="w-full h-auto object-contain object-left-bottom" />
     </div>
 
@@ -47,7 +47,7 @@
     </div>
 
     <div class="w-full max-w-[1400px] relative z-10">
-      <swiper-container init="false" class="mySwiper">
+      <swiper-container init="false" class="mySwiper info-swiper">
         <swiper-slide *ngFor="let item of benefits" class="max-w-[90%] md:max-w-[680px] py-10">
           <div
             class="bg-white rounded-[32px] p-12 shadow-xl flex items-center gap-10 border border-gray-100 h-[280px] w-full">
@@ -64,9 +64,10 @@
         </swiper-slide>
       </swiper-container>
     </div>
+    
     <div class="w-full max-w-4xl flex items-center justify-center gap-10 mt-6 z-20 pb-10">
       <button
-        class="btn-prev bg-white w-[140px] h-[56px] flex items-center justify-center rounded-2xl shadow-sm border border-gray-200 hover:bg-gray-50 transition-all shrink-0">
+        class="info-prev bg-white w-[140px] h-[56px] flex items-center justify-center rounded-2xl shadow-sm border border-gray-200 hover:bg-gray-50 transition-all shrink-0">
         <svg class="w-5 h-5 text-[#5B787D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
         </svg>
@@ -74,12 +75,11 @@
 
       <div class="relative w-[180px] h-[24px] flex items-center justify-center">
         <div class="absolute w-full h-[2px] bg-[#C5D7D9] top-1/2 -translate-y-1/2 z-0"></div>
-
-        <div class="swiper-pagination !relative !w-full !flex !justify-between !items-center z-10 !bottom-0"></div>
+        <div class="info-pagination swiper-pagination !relative !w-full !flex !justify-center !gap-[32px] !items-center z-10 !bottom-0"></div>
       </div>
 
       <button
-        class="btn-next bg-arriendy-teal w-[220px] h-[56px] flex items-center justify-center rounded-2xl shadow-md hover:bg-arriendy-dark transition-all text-white shrink-0">
+        class="info-next bg-arriendy-teal w-[220px] h-[56px] flex items-center justify-center rounded-2xl shadow-md hover:bg-arriendy-dark transition-all text-white shrink-0">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
         </svg>
