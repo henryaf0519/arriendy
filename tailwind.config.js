@@ -37,6 +37,11 @@ module.exports = {
       animation: {
         'fade-in-up': 'fadeInUp 0.3s ease-out forwards',
       },
+      fontSize: {
+        'size24': '24px',
+        'size14': '14px',
+        'size12': '12px',
+      },
     },
   },
   plugins: [],
