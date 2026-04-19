@@ -22,6 +22,8 @@ module.exports = {
         grayFour:"#B6BFCA",
         grayFive:"#E5E5E5",
         graySix:"#BABABA",
+        graySeven:"#E0E0E0",
+        grayEight:'#737373',  
 
         black:"#102935",
        
@@ -59,7 +61,8 @@ module.exports = {
         'size16': '16px',
         'size14': '14px',
         'size12': '12px',
-         'size11': '11px',
+        'size11': '11px',
+        'size10': '10px',
       },
     },
   },

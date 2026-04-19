@@ -1,4 +1,9 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule, provideExperimentalZonelessChangeDetection } from '@angular/core';
+import {
+  CUSTOM_ELEMENTS_SCHEMA,
+  importProvidersFrom,
+  NgModule,
+  provideExperimentalZonelessChangeDetection,
+} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -8,13 +13,12 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { cartReducer } from './state/cart.reducer';
 import { CartEffects } from './state/cart.effects';
-import { SharedModule } from "./shared/shared.module";
+import { SharedModule } from './shared/shared.module';
+
 
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -22,11 +26,9 @@ import { SharedModule } from "./shared/shared.module";
     EffectsModule.forRoot([CartEffects]),
     BrowserAnimationsModule,
     SharedModule,
-],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [
-    provideExperimentalZonelessChangeDetection()
   ],
-  bootstrap: [AppComponent]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  providers: [provideExperimentalZonelessChangeDetection() ],
+  bootstrap: [AppComponent],  
 })
-export class AppModule { }
+export class AppModule {}
