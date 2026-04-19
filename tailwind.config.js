@@ -12,15 +12,19 @@ module.exports = {
         blue: "#DEF4F4",
         blueTwo:"#2B5264",
         blueThree:"#00D9BB",
+        blueFour: "#2E6DF1",
+        blueFive:"#2B5264",
+        blueSix:"#274C5D",
         
         gray:"#ABABAB",
         grayTwo:"#4B6571",
         grayThree:"#B2B2B2",
         grayFour:"#B6BFCA",
         grayFive:"#E5E5E5",
+        graySix:"#BABABA",
 
         black:"#102935",
-        blue: "#2E6DF1",
+       
         darkBanner: "#1a3e48", // El azul petróleo oscuro del recuadro
         
         arriendy: {
@@ -48,6 +52,7 @@ module.exports = {
         'fade-in-up': 'fadeInUp 0.3s ease-out forwards',
       },
       fontSize: {
+        'size68': '68px',
         'size28': '28px',
         'size24': '24px',
         'size22': '22px',

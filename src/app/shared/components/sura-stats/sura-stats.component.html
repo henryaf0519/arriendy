@@ -21,9 +21,9 @@
     />
 
     <h2
-      class="text-[28px] lg:text-[34px] font-bold text-[#2D4A5E] leading-tight mb-8 z-0 relative"
+      class="text-[28px] lg:text-[34px] font-bold text-blueFive leading-tight mb-8 z-0 relative"
     >
-      El Respaldo y la Experiencia de <span class="text-[#003366]">SURA</span>
+      El Respaldo y la Experiencia de <span class="text-blueFour">SURA</span>
     </h2>
 
     <div class="space-y-4 max-w-md z-0 relative">
@@ -32,20 +32,20 @@
           class="flex items-center p-6 lg:p-7 bg-white rounded-[20px]"
           [class]="
             stat.isHighlighted
-              ? 'border border-[#00D1FF] shadow-[0_0_15px_rgba(0,209,255,0.15)]'
-              : 'border border-gray-100 shadow-sm'
+              ? 'border border-blueThree shadow-[0_0_15px_rgba(0,209,255,0.15)]'
+              : 'border border-graySix shadow-sm'
           "
         >
           <div
-            class="text-[40px] lg:text-[48px] font-extrabold leading-none mr-4 min-w-[150px] lg:min-w-[190px] tabular-nums"
-            [class]="stat.isHighlighted ? 'text-[#2D4A5E]' : 'text-[#00A99D]'"
+            class="text-size68 lg:text-[48px] font-extrabold leading-none mr-4 min-w-[150px] lg:min-w-[190px] tabular-nums"
+            [class]="stat.isHighlighted ? 'text-blueTwo' : 'text-secondary'"
           >
             +{{ stat.displayNumber }}
           </div>
 
-          <div class="flex flex-col border-l border-gray-200 pl-4 lg:pl-6">
+          <div class="flex flex-col  pl-4 lg:pl-6">
             <span
-              class="text-[17px] lg:text-[19px] font-bold text-[#2D4A5E] leading-tight"
+              class="text-size22 lg:text-[19px] font-bold text-blueSix leading-tight"
             >
               {{ stat.title }}
             </span>
