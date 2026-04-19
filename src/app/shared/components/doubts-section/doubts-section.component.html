@@ -1,36 +1,22 @@
-<section class="w-full">
-  <div
-    class="mt-20 bg-third relative min-h-[750px] flex flex-col items-center pt-20 overflow-hidden"
-  >
+<section class="w-full bg-third">
+  <h1 class="text-center text-size28 text-blueTwo font-bold pt-16 mb-5">¿Tienes dudas? Aquí te las resolvemos</h1>
+  <div class="relative min-h-[750px] flex flex-col items-center  overflow-hidden">
     <div class="w-full max-w-[1400px] relative z-10">
       <swiper-container #swiperRef init="false" class="mySwiper">
-        <swiper-slide
-          *ngFor="let item of benefits"
-          class="max-w-[95%] md:max-w-[600px] pt-16 pb-10"
-        >
+        <swiper-slide *ngFor="let item of benefits" class="max-w-[95%] md:max-w-[600px] pt-16 pb-10">
           <div
-            class="relative bg-white rounded-3xl pt-3 shadow-2xl border border-gray-100 w-[428px] h-[253px] flex flex-col items-center text-center"
-          >
+            class="relative bg-white rounded-3xl pt-3 shadow-2xl border border-gray-100 w-[428px] h-[253px] flex flex-col items-center text-center">
             <div
-              class="absolute top-0 left-[14%]  w-[86px] h-[86px] -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-full  shadow-lg overflow-hidden z-10 "
-            >
-              <img
-                [src]="item.avatar"
-                [alt]="'Avatar de ' + item.title"
-                class="w-full h-full object-cover"
-              />
+              class="absolute top-0 left-[14%]  w-[86px] h-[86px] -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-full  shadow-lg overflow-hidden z-10 ">
+              <img [src]="item.avatar" [alt]="'Avatar de ' + item.title" class="w-full h-full object-cover" />
             </div>
 
-            <div class="pt-14 w-full">
-              <h4
-                class="font-inter font-bold text-[#1a3e48] text-[20px] mb-5 leading-tight uppercase tracking-wider"
-              >
+            <div class="pt-14 px-5 w-full">
+              <h4 class="font-inter font-bold text-black text-size16 mb-5  uppercase tracking-wider text-left">
                 {{ item.title }}
               </h4>
 
-              <p
-                class="text-gray-600 text-[17px] leading-relaxed font-inter font-normal whitespace-pre-line text-left md:text-center"
-              >
+              <p class="text-black text-size16 leading-4 text-justify font-inter font-normal whitespace-pre-line">
                 {{ item.desc }}
               </p>
             </div>
@@ -39,62 +25,32 @@
       </swiper-container>
     </div>
 
-    <div
-      class="w-full max-w-4xl flex items-center justify-center gap-10 mt-6 z-20 pb-10"
-    >
-      <button
-        #prevBtn
-        class="bg-white w-[140px] h-[56px] flex items-center justify-center rounded-2xl shadow-sm border border-gray-200 hover:bg-gray-50 transition-all shrink-0"
-      >
-        <svg
-          class="w-5 h-5 text-[#5B787D]"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M15 19l-7-7 7-7"
-          />
+    <div class="w-full max-w-4xl flex items-center justify-center gap-10 mt-6 z-20 pb-10">
+      <button #prevBtn
+        class="bg-white w-[135px] h-[36px] flex items-center justify-center rounded-2xl shadow-sm border border-grayFive hover:bg-gray-50 transition-all shrink-0">
+        <svg class="w-5 h-5 text-[#5B787D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
         </svg>
       </button>
 
       <div class="relative w-[180px] h-[24px] flex items-center justify-center">
-        <div
-          class="absolute w-full h-[2px] bg-[#C5D7D9] top-1/2 -translate-y-1/2 z-0"
-        ></div>
-        <div
-          #paginationRef
-          class="swiper-pagination !relative !w-full !flex !justify-between !items-center z-10 !bottom-0"
-        ></div>
+        <div class="absolute w-full h-[2px] bg-[#C5D7D9] top-1/2 -translate-y-1/2 z-0"></div>
+        <div #paginationRef
+          class="swiper-pagination !relative !w-full !flex !justify-between !items-center z-10 !bottom-0"></div>
       </div>
 
-      <button
-        #nextBtn
-        class="bg-arriendy-teal w-[220px] h-[56px] flex items-center justify-center rounded-2xl shadow-md hover:bg-arriendy-dark transition-all text-white shrink-0"
-      >
-        <svg
-          class="w-5 h-5"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M9 5l7 7-7 7"
-          />
+      <button #nextBtn
+        class="bg-secondary w-[135px] h-[36px] flex items-center justify-center rounded-2xl shadow-md hover:bg-arriendy-dark transition-all text-white shrink-0">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
         </svg>
       </button>
     </div>
 
-    <div class="flex items-center">
-      <h1>Ver todas las preguntas frecuentes</h1>
+    <div class="flex items-center text-blueFour text-size14 underline">
+      <a href="#">Ver todas las preguntas frecuentes</a>
 
     </div>
-     
+
   </div>
 </section>

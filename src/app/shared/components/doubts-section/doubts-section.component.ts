@@ -19,7 +19,7 @@ register();
   imports: [CommonModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class DoubtsSectionComponent implements AfterViewInit {
+export class  DoubtsSectionComponent implements AfterViewInit {
   @ViewChild('swiperRef') swiperRef!: ElementRef;
   @ViewChild('nextBtn') nextBtn!: ElementRef;
   @ViewChild('prevBtn') prevBtn!: ElementRef;
@@ -35,21 +35,15 @@ export class DoubtsSectionComponent implements AfterViewInit {
     {
       title: '¿QUÉ ES ARRIENDY?',
       desc: 'Somos canal oficial de SURA en seguros de arrendamiento. Ofrecemos respaldo, confianza y soluciones ágiles que protegen el patrimonio de propietarios, inquilinos e inmobiliarias, con seguros diseñados para dar tranquilidad.',
-      avatar: 'assets/imgs/avatar.svg', // Reemplaza con tu ruta real
+      avatar: 'assets/imgs/avatar1.svg', // Reemplaza con tu ruta real
       icon: '',
     },
     {
       title: '¿QUÉ CUBRE EL SEGURO?',
       desc: 'Coberturas principales:\n• Canon de arrendamiento\n• Cuotas de administración\n• Servicios públicos',
-      avatar: 'assets/imgs/avatar.svg', // Reemplaza con tu ruta real
+      avatar: 'assets/imgs/avatar2.svg', // Reemplaza con tu ruta real
       icon: '',
-    },
-    {
-      title: '¿QUÉ CUBRE EL SEGURO?',
-      desc: 'Coberturas principales:\n• Canon de arrendamiento\n• Cuotas de administración\n• Servicios públicos',
-      avatar: 'assets/imgs/avatar-mujer-2.png', // Reemplaza con tu ruta real
-      icon: '',
-    },
+    }
   ];
 
   ngAfterViewInit() {
