@@ -79,7 +79,7 @@ export class InfoSectionComponent implements AfterViewInit {
         creativeEffect: {
           limitProgress: 2,
           prev: { opacity: 0, scale: 0.85, translate: ['-100%', 0, -1] },
-          next: { opacity: 0.4, scale: 0.85, translate: ['62%', 0, -1] },
+          next: { opacity: 0.4, scale: 0.85, translate: ['50%', 0, -1] },
         },
       };
 
