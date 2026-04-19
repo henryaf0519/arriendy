@@ -1,101 +1,34 @@
 <div class="relative w-full bg-[#EEF6F9] py-16 lg:py-24  overflow-y-visible h-[651px]">
 
- <img src="assets/imgs/homeBenefits.png"
-     class="absolute  bottom-0 h-[750px] w-auto max-w-none object-contain object-left z-0 pointer-events-none opacity-20 lg:opacity-100"
-     alt="Ilustración decorativa" />
+    <img src="assets/imgs/homeBenefits.png"
+        class="absolute  bottom-0 h-[750px] w-auto max-w-none object-contain object-left z-0 pointer-events-none opacity-20 lg:opacity-100"
+        alt="Ilustración decorativa" />
 
     <div class="relative z-10 max-w-7xl mx-auto px-4 md:px-8">
 
-        <h2 class="text-3xl md:text-4xl font-bold text-center text-[#2D4A5E] mb-12 lg:mb-16 leading-tight">
+        <h2 class="text-size28 font-bold text-center text-blueTwo mb-12 lg:mb-16 leading-tight">
             ¿Qué cubre exactamente tu seguro?
         </h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
-
-            <div class="bg-white rounded-[24px] p-7 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 flex flex-col group">
-                <div class="flex items-center gap-5 mb-5">
-                    <div class="w-12 h-12 rounded-full bg-[#F0F7FB] flex items-center justify-center text-blue-500 shrink-0 shadow-inner group-hover:scale-110 transition-transform">
-                        <span class="text-xl">🏠</span>
-                    </div>
-                    <h3 class="font-bold text-[#2D4A5E] text-[17px] leading-tight flex-grow">
-                        Canon de<br>Arrendamiento
-                    </h3>
-                </div>
-                <p class="text-[14px] text-gray-500 leading-relaxed flex-grow">
-                    Garantizamos el pago de tu arriendo el día 10 de cada mes, sin importar si tu inquilino se atrasa.
-                </p>
+       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[15px] w-fit mx-auto">
+  
+  @for (item of servicios; track item.titulo) {
+    <div class="bg-white rounded-[18px] p-6 shadow-sm  flex flex-col group w-[306px] h-[185px]">
+        
+        <div class="flex items-center gap-4 mb-3">
+            <div class="w-10 h-10 rounded-full bg-third flex items-center justify-center text-blue-500 shrink-0 shadow-inner">
+                <img [src]="'assets/imgs/' + item.img" [alt]="item.titulo" class="w-5 h-5">
             </div>
-
-            <div class="bg-white rounded-[24px] p-7 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 flex flex-col group">
-                <div class="flex items-center gap-5 mb-5">
-                    <div class="w-12 h-12 rounded-full bg-[#F0F7FB] flex items-center justify-center text-blue-500 shrink-0 shadow-inner group-hover:scale-110 transition-transform">
-                        <span class="text-xl">⚡</span>
-                    </div>
-                    <h3 class="font-bold text-[#2D4A5E] text-[17px] leading-tight flex-grow">
-                        Servicios<br>Públicos
-                    </h3>
-                </div>
-                <p class="text-[14px] text-gray-500 leading-relaxed flex-grow">
-                    Cubrimos las facturas pendientes de agua, luz, gas y teléfono que deje el inquilino al desocupar.
-                </p>
-            </div>
-
-            <div class="bg-white rounded-[24px] p-7 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 flex flex-col group">
-                <div class="flex items-center gap-5 mb-5">
-                    <div class="w-12 h-12 rounded-full bg-[#F0F7FB] flex items-center justify-center text-blue-500 shrink-0 shadow-inner group-hover:scale-110 transition-transform">
-                        <span class="text-xl">✔️</span>
-                    </div>
-                    <h3 class="font-bold text-[#2D4A5E] text-[17px] leading-tight flex-grow">
-                        Cuota de<br>administración
-                    </h3>
-                </div>
-                <p class="text-[14px] text-gray-500 leading-relaxed flex-grow">
-                    Garantizamos el pago de tu cuota de administración el día 10 de cada mes, sin importar si tu inquilino se atrasa.
-                </p>
-            </div>
-
-            <div class="bg-white rounded-[24px] p-7 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 flex flex-col group">
-                <div class="flex items-center gap-5 mb-5">
-                    <div class="w-12 h-12 rounded-full bg-[#F0F7FB] flex items-center justify-center text-blue-500 shrink-0 shadow-inner group-hover:scale-110 transition-transform">
-                        <span class="text-xl">🛡️</span>
-                    </div>
-                    <h3 class="font-bold text-[#2D4A5E] text-[17px] leading-tight flex-grow">
-                        Límite de<br>indemnización
-                    </h3>
-                </div>
-                <p class="text-[14px] text-gray-500 leading-relaxed flex-grow">
-                    Es el tiempo máximo (ej: 12 o 36 meses) durante el cual asumimos los pagos si el inquilino no cumple.
-                </p>
-            </div>
-
-            <div class="bg-white rounded-[24px] p-7 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 flex flex-col group">
-                <div class="flex items-center gap-5 mb-5">
-                    <div class="w-12 h-12 rounded-full bg-[#F0F7FB] flex items-center justify-center text-blue-500 shrink-0 shadow-inner group-hover:scale-110 transition-transform">
-                        <span class="text-xl">🔧</span>
-                    </div>
-                    <h3 class="font-bold text-[#2D4A5E] text-[17px] leading-tight flex-grow">
-                        Asistencia<br>domiciliaria
-                    </h3>
-                </div>
-                <p class="text-[14px] text-gray-500 leading-relaxed flex-grow">
-                    Servicios de emergencia 24/7 en plomería, electricidad y cerrajería para el inmueble.
-                </p>
-            </div>
-
-            <div class="bg-white rounded-[24px] p-7 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 flex flex-col group">
-                <div class="flex items-center gap-5 mb-5">
-                    <div class="w-12 h-12 rounded-full bg-[#F0F7FB] flex items-center justify-center text-blue-500 shrink-0 shadow-inner group-hover:scale-110 transition-transform">
-                        <span class="text-xl">⚠️</span>
-                    </div>
-                    <h3 class="font-bold text-[#2D4A5E] text-[17px] leading-tight flex-grow">
-                        Daños y<br>faltantes
-                    </h3>
-                </div>
-                <p class="text-[14px] text-gray-500 leading-relaxed flex-grow">
-                    Respaldo económico si el inmueble es devuelto con daños físicos o faltan elementos del inventario.
-                </p>
-            </div>
-
+            <h3 class="font-bold text-blueFive text-size22 leading-tight" [innerHTML]="item.titulo"></h3>
         </div>
+
+        <p class="text-size14 text-grayNine leading-snug">
+            {{ item.desc }}
+        </p>
+
+    </div>
+  }
+
+</div>
     </div>
 </div>
