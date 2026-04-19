@@ -8,11 +8,21 @@ module.exports = {
         main: "#0033a0",
         secondary: "#41B6A6",
         third: "#EDF6F6",
-        gray: "#8D8D8D",
-        sura: {
-          blue: "#2E6DF1",
-          darkBanner: "#1a3e48", // El azul petróleo oscuro del recuadro
-        },
+        
+        blue: "#DEF4F4",
+        blueTwo:"#2B5264",
+        blueThree:"#00D9BB",
+        
+        gray:"#ABABAB",
+        grayTwo:"#4B6571",
+        grayThree:"#B2B2B2",
+        grayFour:"#B6BFCA",
+        grayFive:"#E5E5E5",
+
+        black:"#102935",
+        blue: "#2E6DF1",
+        darkBanner: "#1a3e48", // El azul petróleo oscuro del recuadro
+        
         arriendy: {
           teal: "#40b4a4", // El color del botón "Cotizar"
           dark: "#349487",
@@ -38,9 +48,13 @@ module.exports = {
         'fade-in-up': 'fadeInUp 0.3s ease-out forwards',
       },
       fontSize: {
+        'size28': '28px',
         'size24': '24px',
+        'size22': '22px',
+        'size16': '16px',
         'size14': '14px',
         'size12': '12px',
+         'size11': '11px',
       },
     },
   },

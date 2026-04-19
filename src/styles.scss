@@ -3,18 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-    font-family: 'Poppins';
-    src: url('assets/fonts/Poppins-Medium.ttf') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #F6F8FB;
-  }
-
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f6f8fb;
+}
 
 :root {
   --swiper-pagination-bullet-horizontal-gap: 8px; /* Espacio entre los puntos */
