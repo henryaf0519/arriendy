@@ -18,6 +18,7 @@ import { WhySimpleComponent } from './components/why-simple/why-simple.component
 import { TargetAudienceComponent } from './components/target-audience/target-audience.component';
 import { InsuranceHeroComponent } from './components/insurance-hero/insurance-hero.component';
 import { FaqSectionComponent } from './components/faq-section/faq-section.component';
+import { InsuranceCalculatorComponent } from './components/insurance-calculator/insurance-calculator.component';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
@@ -44,7 +45,8 @@ import { RouterModule } from '@angular/router';
     WhySimpleComponent,
     TargetAudienceComponent,
     InsuranceHeroComponent,
-    FaqSectionComponent
+    FaqSectionComponent,
+    InsuranceCalculatorComponent
   ],
   exports: [
     HeaderComponent,
@@ -63,7 +65,8 @@ import { RouterModule } from '@angular/router';
     WhySimpleComponent,
     TargetAudienceComponent,
     InsuranceHeroComponent,
-    FaqSectionComponent
+    FaqSectionComponent,
+    InsuranceCalculatorComponent
   ],
 })
 export class SharedModule {}
