@@ -17,6 +17,7 @@ import { StrategicAllianceComponent } from './components/strategic-alliance/stra
 import { WhySimpleComponent } from './components/why-simple/why-simple.component';
 import { TargetAudienceComponent } from './components/target-audience/target-audience.component';
 import { InsuranceHeroComponent } from './components/insurance-hero/insurance-hero.component';
+import { FaqSectionComponent } from './components/faq-section/faq-section.component';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
@@ -42,7 +43,8 @@ import { RouterModule } from '@angular/router';
     StrategicAllianceComponent,
     WhySimpleComponent,
     TargetAudienceComponent,
-    InsuranceHeroComponent
+    InsuranceHeroComponent,
+    FaqSectionComponent
   ],
   exports: [
     HeaderComponent,
@@ -60,7 +62,8 @@ import { RouterModule } from '@angular/router';
     StrategicAllianceComponent,
     WhySimpleComponent,
     TargetAudienceComponent,
-    InsuranceHeroComponent
+    InsuranceHeroComponent,
+    FaqSectionComponent
   ],
 })
 export class SharedModule {}

@@ -1,0 +1,92 @@
+<section class="w-full bg-white py-16 px-6 font-sans">
+  <div class="max-w-4xl mx-auto text-center mb-16">
+    <h2 class="text-3xl md:text-4xl font-bold text-[#2D4A5E] mb-4">¿En qué te podemos ayudar?</h2>
+    <p class="text-gray-500 mb-8">Encuentra respuestas rápidas a tus dudas o comunícate con nuestro equipo.</p>
+    
+    <div class="relative max-w-2xl mx-auto flex items-center gap-2">
+      <div class="relative flex-grow">
+        <span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">🔍</span>
+        <input type="text" placeholder="Escribe tu duda aquí..." 
+               class="w-full pl-12 pr-4 py-4 rounded-full border border-gray-100 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#4FC0B0]/20">
+      </div>
+      <button class="bg-[#4FC0B0] text-white px-8 py-4 rounded-full font-bold hover:bg-[#3db0a0] transition-colors">Buscar</button>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12">
+    
+    <div class="lg:col-span-2">
+      <h3 class="text-2xl font-bold text-[#2D4A5E] mb-8">Preguntas Frecuentes</h3>
+      
+      <div class="space-y-4">
+        @for (item of faqs; track $index) {
+          <div class="border border-gray-100 rounded-2xl overflow-hidden transition-all"
+               [class.bg-[#F8FAFB]]="faqOpen === $index">
+            <button (click)="toggleFaq($index)" 
+                    class="w-full flex items-center justify-between p-6 text-left">
+              <span class="font-bold text-[#2D4A5E] text-[15px] uppercase tracking-tight">{{ item.q }}</span>
+              <span class="text-xl transition-transform duration-300" [class.rotate-180]="faqOpen === $index">
+                {{ faqOpen === $index ? '−' : '↓' }}
+              </span>
+            </button>
+            
+            <div class="px-6 pb-6 text-gray-500 text-sm leading-relaxed" 
+                 [class.hidden]="faqOpen !== $index">
+              {{ item.a }}
+            </div>
+          </div>
+        }
+      </div>
+      
+      <button class="mt-8 text-blue-500 font-bold flex items-center gap-2 hover:underline">
+        Ver todas las preguntas <span>→</span>
+      </button>
+    </div>
+
+    <div class="space-y-6">
+      
+      <div class="bg-[#183642] rounded-3xl p-8 text-white relative overflow-hidden">
+        <div class="bg-red-500/20 w-12 h-12 rounded-xl flex items-center justify-center mb-6">
+          <span class="text-red-400 text-2xl">⚠️</span>
+        </div>
+        <h4 class="text-xl font-bold mb-4">¿Problemas con el pago?</h4>
+        <p class="text-gray-400 text-sm mb-8 leading-relaxed">
+          Si tu inquilino presenta mora o necesitas activar la asistencia legal de SURA, repórtalo inmediatamente.
+        </p>
+        <button class="w-full bg-white text-[#183642] font-bold py-4 rounded-xl hover:bg-gray-100 transition-colors">
+          Reportar Siniestro
+        </button>
+      </div>
+
+      <div class="bg-[#F8FAFB] rounded-3xl p-8 border border-gray-100">
+        <h4 class="text-lg font-bold text-[#2D4A5E] mb-2 text-center">Habla con un humano</h4>
+        <p class="text-xs text-gray-400 text-center mb-8 uppercase font-bold tracking-widest">Lunes a Viernes (8am - 6pm)</p>
+        
+        <div class="space-y-4">
+          <div class="bg-white p-4 rounded-2xl flex items-center gap-4 shadow-sm">
+            <div class="w-10 h-10 bg-green-50 rounded-full flex items-center justify-center text-green-500">📱</div>
+            <div>
+              <p class="text-xs font-bold text-[#2D4A5E]">WhatsApp</p>
+              <p class="text-[10px] text-gray-400">Respuesta en 15 min</p>
+            </div>
+          </div>
+          <div class="bg-white p-4 rounded-2xl flex items-center gap-4 shadow-sm">
+            <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center text-blue-500">📧</div>
+            <div>
+              <p class="text-xs font-bold text-[#2D4A5E]">Correo Electrónico</p>
+              <p class="text-[10px] text-gray-400 text-blue-500">hola&#64;arriendy.com</p>
+            </div>
+          </div>
+          <div class="bg-white p-4 rounded-2xl flex items-center gap-4 shadow-sm">
+            <div class="w-10 h-10 bg-gray-50 rounded-full flex items-center justify-center text-gray-500">📞</div>
+            <div>
+              <p class="text-xs font-bold text-[#2D4A5E]">Línea Nacional</p>
+              <p class="text-[10px] text-gray-400">01 8000 123 456</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
