@@ -8,49 +8,39 @@
 
   </div>
 
-  <div class="relative z-10 max-w-6xl mx-auto px-4 py-16 font-sans text-[#2B5264]">
-    
+  <div class="relative z-10 max-w-6xl mx-auto px-4 py-16 font-sans text-blueFive">
+
     <div class="text-center mb-60 mt-12">
-      <h2 class="text-3xl md:text-4xl font-bold mb-6 leading-tight">
+      <h2 class="text-size36 md:text-size36  font-bold mb-6 leading-tight">
         Innovación digital con respaldo de <br class="hidden md:block"> tradición.
       </h2>
-      <p class="text-[#2B5264]/80 text-base max-w-3xl mx-auto leading-relaxed">
-        Nacimos para transformar la forma en la que aseguras tus arrendamientos. Olvídate del papeleo infinito y de la falta de acompañamiento. En <strong>Arriendy</strong> cuentas con personas reales, apoyadas en tecnología, para responder a tus necesidades.
+      <p class="text-blueFive/80 text-base max-w-3xl mx-auto ">
+        Nacimos para transformar la forma en la que aseguras tus arrendamientos. Olvídate del papeleo infinito y de la
+        falta de acompañamiento. En <strong>Arriendy</strong> cuentas con personas reales, apoyadas en tecnología, para
+        responder a tus necesidades.
       </p>
     </div>
 
     <div class="text-center mb-12">
-      <p class="text-lg md:text-xl font-medium mb-12 max-w-4xl mx-auto">
-        Construimos un equipo humano capaz de brindar servicios de alta calidad para clientes y aliados. 
+      <p class="text-size24 md:text-size24 font-medium mb-12 max-w-4xl mx-auto">
+        Construimos un equipo humano capaz de brindar servicios de alta calidad para clientes y aliados.
         <span class="font-bold">Nuestros pilares son tecnología, confianza y cercanía.</span>
       </p>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        
-        <div class="bg-white/80 backdrop-blur-sm rounded-[32px] p-10 shadow-sm border border-gray-100 flex flex-col items-center hover:shadow-md transition-shadow">
-          <div class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mb-6">
-            <span class="text-2xl">🌐</span> </div>
-          <p class="text-[15px] leading-snug">
-            <span class="font-bold block text-sm uppercase tracking-wider mb-1">TECNOLOGÍA</span>
-            para brindar soluciones oportunas.
-          </p>
-        </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-[15px] w-fit mx-auto">
 
-        <div class="bg-white/80 backdrop-blur-sm rounded-[32px] p-10 shadow-sm border border-gray-100 flex flex-col items-center hover:shadow-md transition-shadow">
-          <div class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mb-6">
-            <span class="text-2xl">🛡️</span> </div>
-          <p class="text-[15px] leading-snug">
-            La <span class="font-bold">CONFIANZA</span> que hace posible relaciones de valor.
-          </p>
-        </div>
+        @for (item of valores; track $index) {
+        <div
+          class="bg-white rounded-[24px] p-8 border border-grayFive shadow-sm flex flex-col items-center text-center w-[306px] h-[185px] justify-center transition-all hover:shadow-md">
 
-        <div class="bg-white/80 backdrop-blur-sm rounded-[32px] p-10 shadow-sm border border-gray-100 flex flex-col items-center hover:shadow-md transition-shadow">
-          <div class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mb-6">
-            <span class="text-2xl">🤝</span> </div>
-          <p class="text-[15px] leading-snug">
-            Y la <span class="font-bold uppercase text-sm tracking-wider">CERCANÍA</span> de los que son buenos amigos, socios y aliados.
-          </p>
+          <div class="w-14 h-14 bg-[#F1F3F4] rounded-full flex items-center justify-center mb-4 shrink-0">
+            <img [src]="item.icon" class="w-7 h-7" alt="icon">
+          </div>
+
+          <p class="text-size16 text-blueFive font-bold leading-tight px-2" [innerHTML]="item.texto"></p>
+
         </div>
+        }
 
       </div>
     </div>
