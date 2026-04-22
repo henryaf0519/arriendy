@@ -9,6 +9,7 @@ import {
 } from '@angular/core';
 import { register } from 'swiper/element/bundle';
 import { SwiperOptions } from 'swiper/types';
+import { RouterModule } from '@angular/router';
 
 // ¡ESTO ES CLAVE! Igual que en tu ejemplo funcional
 register();
@@ -17,7 +18,7 @@ register();
   selector: 'app-doubts-section',
   standalone: true,
   templateUrl: './doubts-section.component.html',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class  DoubtsSectionComponent implements AfterViewInit {
