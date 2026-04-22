@@ -15,16 +15,29 @@ export class InsuranceCalculatorComponent {
   }
 
   private loadArriendyScript(): void {
-    const scriptId = 'arriendy-widget-script';
+  const scriptId = 'arriendy-widget-script';
+  if (!document.getElementById(scriptId)) {
+    const script = document.createElement('script');
+    script.id = scriptId;
+    script.src = 'https://cdn.arriendy.paisasoft.com/quoter/v1/widget.js';
     
-    // Evitamos cargar el script más de una vez si el componente se destruye y recrea
-    if (!document.getElementById(scriptId)) {
-      const script = document.createElement('script');
-      script.id = scriptId;
-      script.src = 'https://cdn.arriendy.paisasoft.com/quoter/v1/widget.js';
-      script.defer = true;
-      document.body.appendChild(script);
-    }
+    // Al cargar el script, esperamos un momento y ocultamos el loader
+    script.onload = () => {
+      setTimeout(() => {
+        const loader = document.getElementById('loader');
+        if (loader) loader.style.display = 'none';
+      }, 1500); // Ajusta el tiempo según la velocidad del MFE
+    };
+    
+    script.defer = true;
+    document.body.appendChild(script);
+  } else {
+    // Si el script ya existía (ej. volviste a la página), ocultamos rápido
+    setTimeout(() => {
+        const loader = document.getElementById('loader');
+        if (loader) loader.style.display = 'none';
+    }, 500);
   }
+}
 
 }

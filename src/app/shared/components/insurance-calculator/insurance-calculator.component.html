@@ -1,12 +1,17 @@
 <section class="relative z-20 -mt-52 px-6">
   <div class="max-w-7xl mx-auto flex justify-center mb-11">
     
-    <div class="w-full max-w-[1035px] ">
-     <div id="mfe-quote-form-container">
-        
-        <arriendy-quoter source="ariendy-web"></arriendy-quoter>
-        
+    <div class="w-full max-w-[1035px] h-[500px] relative bg-white">
+      
+      <div id="loader" class="absolute inset-0 flex flex-col items-center justify-center bg-white rounded-[32px] z-10">
+        <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-[#40B4A4] mb-4"></div>
+        <p class="text-white font-medium animate-pulse">Preparando tu cotización...</p>
       </div>
+
+      <div id="mfe-quote-form-container" class="relative z-20">
+        <arriendy-quoter source="ariendy-web"></arriendy-quoter>
+      </div>
+      
     </div>
 
   </div>
