@@ -11,3 +11,10 @@ body {
 :root {
   --swiper-pagination-bullet-horizontal-gap: 8px; /* Espacio entre los puntos */
 }
+
+
+.bgGradient {
+  background: linear-gradient(to right, #F6F8FB 0%, #ffffff 100%);
+  width: 100%;
+
+}
