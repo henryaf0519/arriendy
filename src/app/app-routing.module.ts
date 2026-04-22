@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'soporte', 
     loadChildren: () => import('./modules/support/support.module').then(m => m.SupportModule) 
   },
+  { 
+    path: 'register', 
+    loadChildren: () => import('./modules/colect/colect.module').then(m => m.ColectModule) 
+  },
   { path: '**', redirectTo: '/main' } 
 ];
 

@@ -19,6 +19,8 @@ import { TargetAudienceComponent } from './components/target-audience/target-aud
 import { InsuranceHeroComponent } from './components/insurance-hero/insurance-hero.component';
 import { FaqSectionComponent } from './components/faq-section/faq-section.component';
 import { InsuranceCalculatorComponent } from './components/insurance-calculator/insurance-calculator.component';
+import { PartnerEnrollmentComponent } from './components/partner-enrollment/partner-enrollment.component';
+import { ContactComponent } from './components/contact/contact.component';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
@@ -46,7 +48,9 @@ import { RouterModule } from '@angular/router';
     TargetAudienceComponent,
     InsuranceHeroComponent,
     FaqSectionComponent,
-    InsuranceCalculatorComponent
+    InsuranceCalculatorComponent,
+    PartnerEnrollmentComponent,
+    ContactComponent
   ],
   exports: [
     HeaderComponent,
@@ -66,7 +70,9 @@ import { RouterModule } from '@angular/router';
     TargetAudienceComponent,
     InsuranceHeroComponent,
     FaqSectionComponent,
-    InsuranceCalculatorComponent
+    InsuranceCalculatorComponent,
+    PartnerEnrollmentComponent,
+    ContactComponent
   ]
 })
 export class SharedModule {}
