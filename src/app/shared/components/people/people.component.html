@@ -1,39 +1,36 @@
-<div class="relative w-full  mx-auto overflow-visible group">
-  <img src="assets/imgs/team.png" alt="Nuestro Equipo" 
-       class="w-full h-auto block grayscale-[20%]">
+<div class="relative w-full mx-auto overflow-visible group">
+  <img src="assets/imgs/team.png" alt="Nuestro Equipo" class="w-full h-auto block grayscale-[20%]" />
 
   @for (p of personas; track p.id) {
-    <div 
-      class="absolute w-5 h-5 cursor-pointer z-20 -translate-x-1/2 -translate-y-1/2" 
-      [style.top]="p.top" 
-      [style.left]="p.left"
-      (mouseenter)="mostrarInfo(p)"
-      (mouseleave)="ocultarInfo()">
-      
-      <div class="relative flex h-full w-full">
-        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#4FC0B0] opacity-75"></span>
-        <span class="relative inline-flex rounded-full h-5 w-5 bg-[#4FC0B0] border-2 border-white shadow-sm"></span>
-      </div>
-
-      @if (personaActiva?.id === p.id) {
-        <div class="absolute bottom-[160%] left-1/2 -translate-x-1/2 w-56 bg-white p-5 rounded-2xl shadow-2xl z-50 text-center animate-in fade-in slide-in-from-bottom-2 duration-300">
-          
-          <h3 class="text-sm font-bold text-[#2D4A5E] mb-1 leading-tight">
-            {{ p.nombre }}
-          </h3>
-          <p class="text-[11px] font-semibold text-[#4FC0B0] uppercase tracking-wider mb-2">
-            {{ p.cargo }}
-          </p>
-          <p class="text-[11px] text-gray-500 mb-3 break-words">
-            {{ p.email }}
-          </p>
-          <a href="#" class="text-[11px] font-bold text-[#4FC0B0] hover:underline transition-all">
-            Contactar →
-          </a>
-
-          <div class="absolute top-full left-1/2 -translate-x-1/2 border-8 border-transparent border-t-white"></div>
-        </div>
-      }
+  <div class="absolute w-5 h-5 cursor-pointer z-20 -translate-x-1/2 -translate-y-1/2" [style.top]="p.top"
+    [style.left]="p.left" (mouseenter)="mostrarInfo(p)" (mouseleave)="ocultarInfo()">
+    <div class="relative flex h-full w-full">
+      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#4FC0B0] opacity-75"></span>
+      <span class="relative inline-flex rounded-full h-5 w-5 bg-[#4FC0B0] border-2 border-white shadow-sm"></span>
     </div>
+
+    @if (personaActiva?.id === p.id) {
+    <div
+      class="absolute bottom-[160%] left-1/2 -translate-x-1/2 w-56 bg-white p-5 rounded-2xl shadow-2xl z-50 text-center animate-in fade-in slide-in-from-bottom-2 duration-300">
+      <h3 class="text-sm font-bold text-[#2D4A5E] mb-1 leading-tight">
+        {{ p.nombre }}
+      </h3>
+      <p class="text-[11px] font-semibold text-[#4FC0B0] tracking-wider mb-2">
+        {{ p.cargo }}
+      </p>
+      <p class="text-[11px] text-gray-500 mb-3 break-words">
+        {{ p.email }}
+      </p>
+      @if (p.email !== "") {
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to={{ p.email }}" target="_blank"
+        class="text-[11px] font-bold text-[#4FC0B0] hover:underline transition-all">
+        Contactar →
+      </a>
+      }
+
+      <div class="absolute top-full left-1/2 -translate-x-1/2 border-8 border-transparent border-t-white"></div>
+    </div>
+    }
+  </div>
   }
 </div>

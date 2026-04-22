@@ -14,17 +14,66 @@ interface PersonaPunto {
   standalone: true,
   imports: [],
   templateUrl: './people.component.html',
-  styleUrl: './people.component.scss'
+  styleUrl: './people.component.scss',
 })
 export class PeopleComponent {
-
   personas: PersonaPunto[] = [
-    { id: 1, nombre: 'María Victoria Ríos', cargo: 'Gerente Comercial', email: 'mvrios@arriendy.com.co', top: '45%', left: '48%' },
-    { id: 2, nombre: 'Andrés Castro', cargo: 'Director de Tecnología', email: 'acastro@arriendy.com.co', top: '40%', left: '32%' },
-    { id: 3, nombre: 'Lina Montoya', cargo: 'Líder de Operaciones', email: 'lmontoya@arriendy.com.co', top: '55%', left: '20%' },
-    { id: 4, nombre: 'Carlos Ruiz', cargo: 'Soporte al Cliente', email: 'cruiz@arriendy.com.co', top: '35%', left: '76%' },
-    { id: 5, nombre: 'Elena Gómez', cargo: 'Analista de Riesgos', email: 'egomez@arriendy.com.co', top: '50%', left: '10%' },
-    { id: 6, nombre: 'Julián Meza', cargo: 'Asesor Legal', email: 'jmeza@arriendy.com.co', top: '42%', left: '62%' }
+    {
+      id: 1,
+      nombre: '',
+      cargo: 'Análisis de Riesgos',
+      email: '',
+      top: '45%', // Mujer extremo izquierdo
+      left: '9%',
+    },
+    {
+      id: 2,
+      nombre: '',
+      cargo: 'Asesoría Legal',
+      email: '',
+      top: '40%', // Mujer chaleco oscuro
+      left: '19%',
+    },
+    {
+      id: 3,
+      nombre: '',
+      cargo: 'Estrategia Digital',
+      email: '',
+      top: '45%', // Hombre camisa negra
+      left: '31%',
+    },
+    {
+      id: 4,
+      nombre: 'Maria Victoria Rios',
+      cargo: 'Gerente',
+      email: 'mvrios@sura.com.co',
+      top: '40%', // Un poco más arriba en la misma zona central
+      left: '45%',
+    },
+    {
+      id: 5,
+      nombre: '',
+      cargo: 'Estrategia',
+      email: '',
+      top: '40%', // Mujer blazer negro
+      left: '62%',
+    },
+    {
+      id: 6,
+      nombre: 'Maria Angélica Pugliese',
+      cargo: 'Directora Comercial',
+      email: 'mapugliese@sura.com.co',
+      top: '45%', // Posición central (vestido blanco)
+      left: '78%',
+    },
+    {
+      id: 7,
+      nombre: '',
+      cargo: 'Tecnología',
+      email: '',
+      top: '45%', // Mujer con gafas
+      left: '93%',
+    },
   ];
 
   personaActiva: PersonaPunto | null = null;
@@ -36,5 +85,4 @@ export class PeopleComponent {
   ocultarInfo() {
     this.personaActiva = null;
   }
-
 }
