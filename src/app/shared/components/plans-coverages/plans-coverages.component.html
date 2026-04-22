@@ -84,7 +84,7 @@
           <div class="mt-auto">
             <p class="text-size14 text-gray-400 italic mb-4">Tomador: Propietario<br>Máximo valor del canon COP$: Sin
               límite</p>
-            <button [ngClass]="planSeleccionado === 'esencial' ? 'bg-secondary' : 'bg-grayFour'"
+            <button (click)="cotizar()" [ngClass]="planSeleccionado === 'esencial' ? 'bg-secondary' : 'bg-grayFour'"
               class="w-full text-white text-size16 font-bold py-4 rounded-xl mb-3 transition-colors duration-300">
               Cotizar seguro
             </button>
@@ -139,7 +139,7 @@
           <div class="mt-auto">
             <p class="text-size14 text-gray-400 italic mb-4">Tomador: Propietario<br>Máximo valor del canon COP$: Sin
               límite</p>
-            <button [ngClass]="planSeleccionado === 'balance' ? 'bg-[#4FC0B0]' : 'bg-[#BCC3CF]'"
+            <button (click)="cotizar()" [ngClass]="planSeleccionado === 'balance' ? 'bg-[#4FC0B0]' : 'bg-[#BCC3CF]'"
               class="w-full text-white font-bold py-4 rounded-xl mb-3  text-size16 transition-colors duration-300">
               Cotizar seguro
             </button>
@@ -189,7 +189,7 @@
           <div class="mt-auto">
             <p class="text-size14 text-gray-400 italic mb-4">Tomador: Propietario<br>Máximo valor del canon COP$: Sin
               límite</p>
-            <button [ngClass]="planSeleccionado === 'cero' ? 'bg-[#4FC0B0]' : 'bg-[#BCC3CF]'"
+            <button (click)="cotizar()" [ngClass]="planSeleccionado === 'cero' ? 'bg-[#4FC0B0]' : 'bg-[#BCC3CF]'"
               class="w-full text-white font-bold py-4 rounded-xl mb-3 transition-colors duration-300">
               Cotizar seguro
             </button>
