@@ -6,15 +6,17 @@ import {
 import { CommonModule } from '@angular/common';
 import { register } from 'swiper/element/bundle';
 import { SwiperOptions } from 'swiper/types';
+import { ScrollRevealDirective } from '../../../directives/scroll-reveal.directive';
 
 register();
 
 @Component({
   selector: 'app-info-section',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ScrollRevealDirective],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './info-section.component.html',
+  styleUrls: ['./info-section.component.scss'],
 })
 export class InfoSectionComponent implements AfterViewInit {
 

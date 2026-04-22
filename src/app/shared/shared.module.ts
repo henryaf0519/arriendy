@@ -29,7 +29,6 @@ import { RouterModule } from '@angular/router';
   declarations: [
     HeaderComponent,
     HeroComponent,
-    ServicesSectionComponent,
     PlansComponent,
     PlansCoveragesComponent,
     SuraStatsComponent,
@@ -54,7 +53,8 @@ import { RouterModule } from '@angular/router';
     PartnerEnrollmentComponent,
     ContactComponent,
     StudyFormComponent,
-    StudyStepperContainerComponent
+    StudyStepperContainerComponent,
+    ServicesSectionComponent
   ],
   exports: [
     HeaderComponent,
