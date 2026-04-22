@@ -33,10 +33,17 @@
         </svg>
       </button>
 
-      <div class="relative w-[180px] h-[24px] flex items-center justify-center">
+      <div class="relative w-[200px] h-[24px] flex items-center justify-center">
         <div class="absolute w-full h-[2px] bg-[#C5D7D9] top-1/2 -translate-y-1/2 z-0"></div>
-        <div #paginationRef
-          class="swiper-pagination !relative !w-full !flex !justify-between !items-center z-10 !bottom-0"></div>
+
+        <div class="relative w-full flex justify-between items-center z-10">
+          <span *ngFor="let item of baseBenefits; let i = index" (click)="goToSlide(i)"
+            class="transition-all duration-300 cursor-pointer shadow-[0_0_0_4px_#EDF6F6] rounded-full" [ngClass]="{
+        '!bg-arriendy-teal !w-[12px] !h-[12px]': i === activeDotIndex,
+        '!bg-[#AEC7CA] !w-[10px] !h-[10px]': i !== activeDotIndex
+      }">
+          </span>
+        </div>
       </div>
 
       <button #nextBtn

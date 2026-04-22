@@ -5,6 +5,7 @@ import {
   AfterViewInit,
   ViewChild,
   ElementRef,
+  ChangeDetectorRef,
 } from '@angular/core';
 import { register } from 'swiper/element/bundle';
 import { SwiperOptions } from 'swiper/types';
@@ -25,7 +26,7 @@ export class  DoubtsSectionComponent implements AfterViewInit {
   @ViewChild('prevBtn') prevBtn!: ElementRef;
   @ViewChild('paginationRef') paginationRef!: ElementRef;
   // Tus 4 tarjetas originales
-  benefits = [
+  baseBenefits = [
     {
       title: '¿QUÉ RESPALDO ADICIONAL RECIBO?',
       desc: 'Te acompañamos durante todo el proceso. Evaluación del inquilino, revisión jurídica, gestión en caso de siniestro.',
@@ -45,6 +46,11 @@ export class  DoubtsSectionComponent implements AfterViewInit {
       icon: '',
     }
   ];
+
+  benefits = [...this.baseBenefits, ...this.baseBenefits];
+  activeDotIndex = 0;
+
+  constructor(private cdr: ChangeDetectorRef) {}
 
   ngAfterViewInit() {
     const swiperEl = this.swiperRef.nativeElement;
@@ -67,16 +73,22 @@ export class  DoubtsSectionComponent implements AfterViewInit {
         nextEl: this.nextBtn.nativeElement,
         prevEl: this.prevBtn.nativeElement,
       },
-      pagination: {
-        el: this.paginationRef.nativeElement,
-        clickable: true,
-        renderBullet: (index, className) => {
-          return `<span class="${className} !w-[10px] !h-[10px] !bg-[#AEC7CA] !opacity-100 !rounded-full !m-0 !relative z-10 transition-all cursor-pointer shadow-[0_0_0_4px_#EDF6F6] [&.swiper-pagination-bullet-active]:!bg-arriendy-teal [&.swiper-pagination-bullet-active]:!w-[12px] [&.swiper-pagination-bullet-active]:!h-[12px]"></span>`;
-        },
-      },
+      on: {
+        slideChange: (swiper) => {
+          // Si realIndex es 0 o 3 -> activa el punto 0
+          // Si realIndex es 1 o 4 -> activa el punto 1
+          // Si realIndex es 2 o 5 -> activa el punto 2
+          this.activeDotIndex = swiper.realIndex % 3;
+          this.cdr.detectChanges(); 
+        }
+      }
     };
 
     Object.assign(swiperEl, swiperParams);
     swiperEl.initialize();
+    
+  }
+  goToSlide(index: number) {
+    this.swiperRef.nativeElement.swiper.slideToLoop(index);
   }
 }
