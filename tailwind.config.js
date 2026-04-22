@@ -16,6 +16,8 @@ module.exports = {
         blueFive:"#2B5264",
         blueSix:"#274C5D",
         blueSeven:"#163C45",
+
+        red: "#EF4444",
         
         gray:"#ABABAB",
         grayTwo:"#4B6571",
@@ -27,6 +29,9 @@ module.exports = {
         grayEight:'#737373',
         grayNine:"#6E6E6E",
         grayTen:"#F5F8F8",
+        grayEleven:"#9FB1B9",
+
+        green: "#DCFCE7",
 
         black:"#102935",
        
