@@ -14,7 +14,7 @@ export class SuraStatsComponent implements AfterViewInit, OnDestroy {
   // Definimos la Signal con los datos iniciales
   public stats = signal([
     {
-      target: 51000,
+      target: 5248,
       current: 0,
       displayNumber: '0',
       title: 'Propietarios e Inversionistas',
@@ -22,7 +22,7 @@ export class SuraStatsComponent implements AfterViewInit, OnDestroy {
       isHighlighted: true
     },
     {
-      target: 88000,
+      target: 88937,
       current: 0,
       displayNumber: '0',
       title: 'Contratos de arrendamiento',
@@ -81,8 +81,9 @@ export class SuraStatsComponent implements AfterViewInit, OnDestroy {
 
   private startPeriodicIncrement(): void {
     this.incrementSub = interval(3000).subscribe(() => {
-      this.stats.update(items => items.map(stat => {
-        const nextVal = stat.current + 1;
+      this.stats.update(items => items.map((stat, index) => {
+        const amountToAdd = index === 0 ? 1 : 3;
+        const nextVal = stat.current + amountToAdd;
         return { 
           ...stat, 
           current: nextVal, 
