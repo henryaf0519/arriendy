@@ -1,7 +1,10 @@
 <app-hero></app-hero>
-<app-insurance-calculator></app-insurance-calculator>
+<div #hero>
+    <app-insurance-calculator></app-insurance-calculator>
+</div>
+
 <app-info-section></app-info-section>
-<app-services-section></app-services-section>
+<app-services-section (scrollToHero)="goToHero(hero)"></app-services-section>
 <app-plans></app-plans>
 <app-sura-stats></app-sura-stats>
 <app-doubts-section></app-doubts-section>
