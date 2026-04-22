@@ -24,8 +24,12 @@ const routes: Routes = [
     loadChildren: () => import('./modules/support/support.module').then(m => m.SupportModule) 
   },
   { 
-    path: 'register', 
+    path: 'registro', 
     loadChildren: () => import('./modules/colect/colect.module').then(m => m.ColectModule) 
+  },
+  { 
+    path: 'estudio', 
+    loadChildren: () => import('./modules/study/study.module').then(m => m.StudyModule) 
   },
   { path: '**', redirectTo: '/main' } 
 ];

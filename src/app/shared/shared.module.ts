@@ -21,6 +21,8 @@ import { FaqSectionComponent } from './components/faq-section/faq-section.compon
 import { InsuranceCalculatorComponent } from './components/insurance-calculator/insurance-calculator.component';
 import { PartnerEnrollmentComponent } from './components/partner-enrollment/partner-enrollment.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { StudyFormComponent } from './components/study-form/study-form.component';
+import { StudyStepperContainerComponent } from './components/study-stepper-container/study-stepper-container.component';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
@@ -50,7 +52,9 @@ import { RouterModule } from '@angular/router';
     FaqSectionComponent,
     InsuranceCalculatorComponent,
     PartnerEnrollmentComponent,
-    ContactComponent
+    ContactComponent,
+    StudyFormComponent,
+    StudyStepperContainerComponent
   ],
   exports: [
     HeaderComponent,
@@ -72,7 +76,9 @@ import { RouterModule } from '@angular/router';
     FaqSectionComponent,
     InsuranceCalculatorComponent,
     PartnerEnrollmentComponent,
-    ContactComponent
+    ContactComponent,
+    StudyFormComponent,
+    StudyStepperContainerComponent
   ]
 })
 export class SharedModule {}
