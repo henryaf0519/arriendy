@@ -1,8 +1,12 @@
 <header class="fixed top-0 left-0 z-50 w-full transition-all duration-300">
-  <div class="max-w-7xl mx-auto flex items-center w-[770px] justify-between bg-white rounded-b-[40px] px-8 py-4 shadow-md">
+  <div class="max-w-7xl mx-auto flex items-center w-full md:w-[770px] justify-between bg-white rounded-b-[40px] px-8 py-4 shadow-md relative">
     
-    <div class="flex items-center space-x-6 border-ui-border pr-6">
-      <img src="assets/imgs/logos.svg" alt="Arriendy" class="h-8 cursor-pointer" [routerLink]="['/main']" />
+    <div class="flex items-center">
+      <img 
+        src="assets/imgs/logos.svg" 
+        alt="Arriendy" 
+        class="h-8 cursor-pointer" 
+        [routerLink]="['/main']" />
     </div>
 
     <nav class="hidden md:flex items-center space-x-8">
@@ -16,7 +20,29 @@
       </button>
     </nav>
 
-    <div class="md:hidden">
+    <div class="md:hidden flex items-center">
+      <button (click)="toggleMenu()" class="text-gray-600 focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          @if (!isMenuOpen) {
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          } @else {
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          }
+        </svg>
+      </button>
+    </div>
+
+    @if (isMenuOpen) {
+      <div class="absolute top-full left-0 w-full bg-white shadow-xl flex flex-col md:hidden border-t border-gray-100 animate-fade-in-down">
+        <a routerLink="/main" (click)="isMenuOpen = false" class="text-gray font-semibold py-4 px-8 border-b border-gray-50 active:bg-gray-50">Inicio</a>
+        <a routerLink="/coberturas" (click)="isMenuOpen = false" class="text-gray font-semibold py-4 px-8 border-b border-gray-50 active:bg-gray-50">Coberturas</a>
+        <a routerLink="/nosotros" (click)="isMenuOpen = false" class="text-gray font-semibold py-4 px-8 border-b border-gray-50 active:bg-gray-50">Nosotros</a>
+        <a routerLink="/renovacion" (click)="isMenuOpen = false" class="text-gray font-semibold py-4 px-8 border-b border-gray-50 active:bg-gray-50">Renovación</a>
+        <a routerLink="/soporte" (click)="isMenuOpen = false" class="text-gray font-semibold py-4 px-8 flex items-center gap-2 active:bg-gray-50">
+          <img src="assets/imgs/headPhones.svg" alt="Soporte" class="h-5" />
+          Soporte Técnico
+        </a>
       </div>
+    }
   </div>
 </header>
