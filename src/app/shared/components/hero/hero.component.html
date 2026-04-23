@@ -1,33 +1,50 @@
-<section class="relative  w-full h-[450px] md:h-[725px] overflow-visible">
-  <div class="absolute inset-0 z-0">
+<section class="relative w-full h-[600px] md:h-[725px] overflow-hidden md:overflow-visible">
+  <div class="absolute top-0 left-0 w-full z-0 h-[378px] md:h-full">
     <img src="assets/imgs/hero.png" alt="Ciudad Arriendy Sura" class="w-full h-full object-cover object-center" />
   </div>
 
-  <div class="relative top-[-3%] z-10 max-w-7xl h-full flex items-center">
+  <div class="hidden md:flex relative top-[-3%] z-10 max-w-7xl  h-full items-center">
     <div class="relative bg-blueSeven rounded-sm shadow-2xl w-[604px] h-[256px] pt-[16px] pb-[23px] pl-[140px]">
       <div class="flex flex-col justify-between w-[292px]">
         <h1 class="font-inter text-white text-[28px] leading-tight italic font-light">
           Asegura con
-          <span class="font-bold not-italic tracking-wide">SURA</span>
-          <br />
-          el ingreso de tu
-          <br />
+          <span class="font-bold not-italic tracking-wide">SURA</span> <br />
+          el ingreso de tu <br />
           <span class="font-bold not-italic tracking-tight">inmueble arrendado</span>
         </h1>
-
         <p class="font-inter mt-[15px] mb-[15px] text-white text-[16px] font-normal">
-         Cotiza ya tu Seguro de Arrendamiento de manera SIMPLE y 100% digital.
+          Cotiza ya tu Seguro de Arrendamiento de manera SIMPLE y 100% digital.
         </p>
-
         <button
           class="font-inter bg-arriendy-teal hover:bg-arriendy-dark text-white font-bold rounded-lg w-[202px] h-[47px] py-[14px] px-[32px] flex items-center justify-center transition-all">
           Cotizar mi seguro
         </button>
       </div>
+      <img src="assets/gifs/keys.gif" alt="Personajes Arriendy"
+        class="hidden min-[1012px]:block absolute right-[-410px] top-1/2 -translate-y-1/2 z-20 h-[450px] object-contain pointer-events-none" />
+    </div>
+  </div>
 
-    <!--  <img src="assets/gifs/keys.gif" alt="Personajes Arriendy"
-        class="absolute right-[-68%] top-1/2 -translate-y-1/2 z-20 h-[450px] object-contain pointer-events-none" />
-        -->
+  <div class="flex md:hidden relative z-10 w-full h-full flex-col items-center pt-24">
+    <div class="relative bg-blueSeven rounded-r-[40px] shadow-2xl w-full max-w-[340px] p-6 text-left self-start">
+      <h1 class="font-inter text-white text-[22px] leading-tight italic font-light">
+        Asegura con <span class="font-bold not-italic tracking-wide">SURA</span>
+        <br />
+        el ingreso de tu <br />
+        <span class="font-bold not-italic tracking-tight">inmueble arrendado</span>
+      </h1>
+      <p class="font-inter mt-4 text-white text-[15px] font-normal leading-relaxed">
+        Cotiza ya tu Seguro de Arrendamiento<br />100% digital y sin<br />complicaciones.
+      </p>
+
+
+    </div>
+
+    <div class="mt-6 mb-10 w-full flex justify-center">
+      <button
+        class="font-inter bg-arriendy-teal text-white font-bold rounded-2xl w-full max-w-[320px] h-[60px] text-[18px] shadow-lg">
+        Cotizar mi seguro
+      </button>
     </div>
   </div>
 </section>
