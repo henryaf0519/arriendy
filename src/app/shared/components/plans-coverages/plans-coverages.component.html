@@ -45,157 +45,202 @@
         </div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+       <div class="w-full relative z-10  md:px-0">
+        <swiper-container #plansSlider init="false" class="plans-slider-container">
+          <swiper-slide class="py-10 px-2 h-auto">
 
-        <div [ngClass]="{
-            'border-blueThree border-2 scale-105 shadow-2xl z-20': planSeleccionado === 'esencial',
-            'opacity-80 grayscale-[20%] scale-95 border border-grayFive': planSeleccionado !== 'esencial'
-          }" class="bg-white rounded-3xl p-8    flex flex-col transition-all duration-500 cursor-pointer"
-          (click)="selectPlan('esencial')">
+            <div [ngClass]="{
+    'border-blueThree border-2 md:scale-105 shadow-2xl z-20': planSeleccionado === 'esencial',
+    'md:opacity-80 md:grayscale-[20%] md:scale-95 border border-grayFive': planSeleccionado !== 'esencial'
+  }" class="bg-white rounded-3xl p-3 md:p-8 flex flex-col transition-all duration-500 cursor-pointer"
+              (click)="selectPlan('esencial')">
 
-          <div class="flex items-center gap-4 mb-6">
-            <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-3xl">
-              <img src="assets/imgs/rubi.svg" alt="">
+              <div class="flex items-center gap-4 mb-6">
+                <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-3xl">
+                  <img src="assets/imgs/rubi.svg" alt="">
+                </div>
+                <div>
+                  <span class="text-size14 tracking-widest text-gray font-bold">Plan Básico</span>
+                  <h3 class="text-size22 font-bold text-blueTwo">Esencial</h3>
+                  <p class="text-size14 text-grayTwo">Protección básica</p>
+                </div>
+              </div>
+
+              <ul class="space-y-4">
+                <li class="flex items-center gap-3 text-size14 text-black font-medium"><span class="text-blue-500"><img
+                      src="assets/imgs/check.svg" alt=""></span> Canon de arrendamiento.</li>
+                <li class="flex items-center gap-3 text-size14 text-black  font-medium"><span class="text-blue-500"><img
+                      src="assets/imgs/check.svg" alt=""></span> Cuota administración.</li>
+                <li class="flex items-center gap-3 text-size14 font-medium text-grayThree "><span
+                    class="text-blue-500"><img src="assets/imgs/x.svg" alt=""></span> Servicios públicos.</li>
+                <li class="flex items-center gap-3 text-size14 font-medium text-grayThree "><span
+                    class="text-blue-500"><img src="assets/imgs/x.svg" alt=""></span> Restitución de inmueble.</li>
+                <li class="flex items-start gap-3 text-size14  text-black font-medium"><span class="text-blue-500"><img
+                      src="assets/imgs/check.svg" alt=""></span> Sin codeudor (Hasta 8 mill).
+                </li>
+                <li class="flex items-center gap-3 text-size14 font-medium text-grayThree "><span
+                    class="text-blue-500"><img src="assets/imgs/x.svg" alt=""></span> Renovación de póliza con inquilino
+                  en mora.</li>
+                <li class="flex items-center gap-3 text-size14 text-black  font-medium"><span class="text-blue-500"><img
+                      src="assets/imgs/check.svg" alt=""></span> Límite de indemnización: Hasta
+                  vigencia de póliza.</li>
+
+              </ul>
+
+              <div class="pt-6  mt-10 mb-2">
+                <h5 class="text-size12  text-black font-bold uppercase tracking-widest mb-3">Coberturas Opcionales</h5>
+                <div class="flex items-center gap-3 text-size12 font-medium text-black"><span><img
+                      src="assets/imgs/+.svg" alt=""></span> Asistencia domiciliaria.</div>
+
+                <div class="flex items-center gap-3 text-size12 font-medium text-grayThree"><span><img
+                      src="assets/imgs/x.svg" alt=""></span> Daños y faltantes al inventario.</div>
+              </div>
+
+              <div class="mt-auto">
+                <p class="text-size14 text-gray-400 italic mb-4">Tomador: Propietario<br>Máximo valor del canon COP$:
+                  Sin
+                  límite</p>
+                <button ((click)="cotizar()"
+                  [ngClass]="planSeleccionado === 'esencial' ? 'bg-secondary' : 'bg-grayFour'"
+                  class="w-full text-white text-size16 font-bold py-4 rounded-xl mb-3 transition-colors duration-300">
+                  Cotizar seguro
+                </button>
+                <p class="text-size11 text-blueFour text-center font-medium">Ideal para quienes solo buscan proteger lo
+                  esencial, el canon.
+                </p>
+              </div>
             </div>
-            <div>
-              <span class="text-size14 tracking-widest text-gray font-bold">Plan Básico</span>
-              <h3 class="text-size22 font-bold text-blueTwo">Esencial</h3>
-              <p class="text-size14 text-grayTwo">Protección básica</p>
+          </swiper-slide>
+          <swiper-slide class="py-10 px-2  h-auto">
+
+            <div [ngClass]="{
+    'border-blueThree border-2 md:scale-105 shadow-2xl z-20 bg-[#F8FFFF]': planSeleccionado === 'balance',
+    'md:opacity-80 md:grayscale-[20%] md:scale-95 bg-white border border-grayFive': planSeleccionado !== 'balance'
+  }" class="rounded-3xl p-3 md:p-8 flex flex-col relative transition-all duration-500 cursor-pointer"
+              (click)="selectPlan('balance')">
+
+              <div *ngIf="planSeleccionado === 'balance'"
+                class="absolute -top-4 right-8 bg-[#4FC0B0] text-white text-[9px] font-bold px-4 py-1.5 rounded-full tracking-widest animate-bounce">
+                MÁS ELEGIDO
+              </div>
+
+              <div class="flex items-center gap-4 mb-6">
+                <div class="w-16 h-16 bg-teal-50 rounded-2xl flex items-center justify-center text-3xl">
+                  <img src="assets/imgs/shield.svg" alt="">
+                </div>
+                <div>
+                  <span class="text-size14  tracking-widest text-secondary font-bold">Plan Clásico</span>
+                  <h3 class="text-size22 font-bold text-black">Protección PLUS</h3>
+                  <p class="text-size14 text-black">Más respaldo</p>
+                </div>
+              </div>
+
+              <ul class="space-y-4 mb-8 flex-grow">
+                <li class="flex items-center gap-3 text-size14 text-black font-medium"><span class="text-blue-500"><img
+                      src="assets/imgs/check.svg" alt=""></span> Canon de arrendamiento.</li>
+                <li class="flex items-center gap-3 text-size14 text-black font-medium"><span class="text-blue-500"><img
+                      src="assets/imgs/check.svg" alt=""></span> Cuota administración.</li>
+                <li class="flex items-center gap-3 text-size14 text-black font-medium"><span class="text-blue-500"><img
+                      src="assets/imgs/check.svg" alt=""></span> Servicios públicos.</li>
+                <li class="flex items-center gap-3 text-size14 text-black font-medium"><span class="text-blue-500"><img
+                      src="assets/imgs/check.svg" alt=""></span> Restitución de inmueble..</li>
+                <li class="flex items-center gap-3 text-size14 text-black font-medium"><span class="text-blue-500"><img
+                      src="assets/imgs/check.svg" alt=""></span> Sin codeudor (Hasta 8 mill).</li>
+                <li class="flex items-center gap-3 text-size14 text-black font-medium"><span class="text-blue-500"><img
+                      src="assets/imgs/check.svg" alt=""></span> Renovación de póliza con inquilino en mora.</li>
+                <li class="flex items-start gap-3 text-size14 text-black font-medium"><span class="text-blue-500"><img
+                      src="assets/imgs/check.svg" alt=""></span> Límite de indemnización: <span class="font-bold">12
+                    meses</span></li>
+              </ul>
+
+              <div class=" pt-6 mb-8">
+                <h5 class="text-size14 font-extrabold uppercase tracking-widest mb-4">Coberturas Opcionales</h5>
+                <div class="space-y-3">
+                  <div class="flex items-center gap-3 text-size14 font-bold text-blue-600"><span><img
+                        src="assets/imgs/+.svg" alt=""></span> Asistencia domiciliaria.</div>
+                  <div class="flex items-center gap-3 text-size14 font-bold text-blue-600"><span><img
+                        src="assets/imgs/+.svg" alt=""></span> Daños y faltantes al inventario.</div>
+                </div>
+              </div>
+
+              <div class="mt-auto">
+                <p class="text-size14 text-gray-400 italic mb-4">Tomador: Propietario<br>Máximo valor del canon COP$:
+                  Sin
+                  límite</p>
+                <button (click)="cotizar()"
+                  [ngClass]="planSeleccionado === 'balance' ? 'bg-[#4FC0B0]' : 'bg-[#BCC3CF]'"
+                  class="w-full text-white font-bold py-4 rounded-xl mb-3  text-size16 transition-colors duration-300">
+                  Cotizar seguro
+                </button>
+                <p class="text-size11 text-blueFour text-center font-medium">Obtienes un balance ideal con buen límite
+                  de indemnización.
+                </p>
+              </div>
             </div>
-          </div>
+          </swiper-slide>
+          <swiper-slide class="py-10 px-2  h-auto">
 
-          <ul class="space-y-4">
-            <li class="flex items-center gap-3 text-size14 text-black font-medium"><span class="text-blue-500"><img
-                  src="assets/imgs/check.svg" alt=""></span> Canon de arrendamiento</li>
-            <li class="flex items-center gap-3 text-size14 text-black  font-medium"><span class="text-blue-500"><img
-                  src="assets/imgs/check.svg" alt=""></span> Cuota administración</li>
-            <li class="flex items-center gap-3 text-size14 font-medium text-grayThree "><span class="text-blue-500"><img
-                  src="assets/imgs/x.svg" alt=""></span> Servicios públicos</li>
-            <li class="flex items-start gap-3 text-size14  text-black font-medium"><span class="text-blue-500"><img
-                  src="assets/imgs/check.svg" alt=""></span> Límite de indemnización: Hasta vigencia de la póliza</li>
-          </ul>
+            <div [ngClass]="{
+    'border-blueThree border-2 md:scale-105 shadow-2xl z-20': planSeleccionado === 'cero',
+    'md:opacity-80 md:grayscale-[20%] md:scale-95 border border-grayFive': planSeleccionado !== 'cero'
+  }" class="bg-white rounded-3xl p-3 md:p-8 border flex flex-col transition-all duration-500 cursor-pointer"
+              (click)="selectPlan('cero')">
 
-          <div class="pt-6 mt-10">
-            <h5 class="text-size12  text-black font-bold uppercase tracking-widest mb-3">Coberturas Opcionales</h5>
-            <div class="flex items-center gap-3 text-size12 font-medium text-black"><span><img src="assets/imgs/+.svg"
-                  alt=""></span> Asistencia domiciliaria</div>
-          </div>
+              <div class="flex items-center gap-4 mb-6">
+                <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-3xl">
+                  <img src="assets/imgs/diamond.svg" alt="">
+                </div>
+                <div>
+                  <span class="text-size14 tracking-widest text-secondary font-bold">Plan Global</span>
+                  <h3 class="text-size22 text-black font-bold">Tranquilidad 360°</h3>
+                  <p class="text-size14 text-black text-gray-400">Todo incluido</p>
+                </div>
+              </div>
 
-          <div class="mt-auto">
-            <p class="text-size14 text-gray-400 italic mb-4">Tomador: Propietario<br>Máximo valor del canon COP$: Sin
-              límite</p>
-            <button (click)="cotizar()" [ngClass]="planSeleccionado === 'esencial' ? 'bg-secondary' : 'bg-grayFour'"
-              class="w-full text-white text-size16 font-bold py-4 rounded-xl mb-3 transition-colors duration-300">
-              Cotizar seguro
-            </button>
-            <p class="text-size11 text-blueFour text-center font-medium">Pago único por la vigencia de tu contrato</p>
-          </div>
-        </div>
+              <ul class="space-y-4 mb-8 flex-grow">
+                <li class="flex items-center gap-3 text-size14 text-black font-medium"><span class="text-blue-500"><img
+                      src="assets/imgs/check.svg" alt=""></span> Canon de arrendamiento.</li>
+                <li class="flex items-center gap-3 text-size14 text-black font-medium"><span class="text-blue-500"><img
+                      src="assets/imgs/check.svg" alt=""></span> Cuota administración.</li>
+                <li class="flex items-center gap-3 text-size14 text-black font-medium"><span class="text-blue-500"><img
+                      src="assets/imgs/check.svg" alt=""></span> Servicios públicos.</li>
+                <li class="flex items-center gap-3 text-size14 text-black font-medium"><span class="text-blue-500"><img
+                      src="assets/imgs/check.svg" alt=""></span> Restitución de inmueble.</li>
+                <li class="flex items-center gap-3 text-size14 text-black font-medium"><span class="text-blue-500"><img
+                      src="assets/imgs/check.svg" alt=""></span> Flexibilidad si no tienes codeudor.</li>
 
-        <div [ngClass]="{
-            'border-blueThree border-2 scale-105 shadow-2xl z-20 bg-[#F8FFFF]': planSeleccionado === 'balance',
-            'opacity-80 grayscale-[20%] scale-95 bg-white border border-grayFive': planSeleccionado !== 'balance'
-          }" class="rounded-3xl p-8  flex flex-col relative transition-all duration-500 cursor-pointer"
-          (click)="selectPlan('balance')">
+                <li class="flex items-center gap-3 text-size14 text-black font-medium"><span class="text-blue-500"><img
+                      src="assets/imgs/check.svg" alt=""></span> Renovación de póliza con inquilino en mora.</li>
+                <li class="flex items-start gap-3 text-size14 text-black font-medium"><span class="text-blue-500"><img
+                      src="assets/imgs/check.svg" alt=""></span> Límite de indemnización: <span class="font-bold">36
+                    meses</span></li>
+              </ul>
 
-          <div *ngIf="planSeleccionado === 'balance'"
-            class="absolute -top-4 right-8 bg-[#4FC0B0] text-white text-[9px] font-bold px-4 py-1.5 rounded-full tracking-widest animate-bounce">
-            MÁS ELEGIDO
-          </div>
+              <div class="pt-6 mb-8">
+                <h5 class="text-size14 font-extrabold uppercase tracking-widest mb-4">Coberturas Opcionales</h5>
+                <div class="space-y-3">
+                  <div class="flex items-center gap-3 text-size14 text-black font-bold text-blue-600"><span><img
+                        src="assets/imgs/+.svg" alt=""></span> Asistencia domiciliaria</div>
+                  <div class="flex items-center gap-3 text-size14 text-black font-bold text-blue-600"><span><img
+                        src="assets/imgs/+.svg" alt=""></span> Daños y faltantes</div>
+                </div>
+              </div>
 
-          <div class="flex items-center gap-4 mb-6">
-            <div class="w-16 h-16 bg-teal-50 rounded-2xl flex items-center justify-center text-3xl">
-              <img src="assets/imgs/shield.svg" alt="">
+              <div class="mt-auto">
+                <p class="text-size14 text-gray-400 italic mb-4">Tomador: Propietario<br>Máximo valor del canon COP$:
+                  Sin
+                  límite</p>
+                <button (click)="cotizar()"
+                  [ngClass]="planSeleccionado === 'cero' ? 'bg-[#4FC0B0]' : 'bg-[#BCC3CF]'"
+                  class="w-full text-white font-bold py-4 rounded-xl mb-3 transition-colors duration-300">
+                  Cotizar seguro
+                </button>
+                <p class="text-size11 text-blueFour text-center font-medium">Pago único por la vigencia de tu contrato
+                </p>
+              </div>
             </div>
-            <div>
-              <span class="text-size14  tracking-widest text-secondary font-bold">Plan Clásico</span>
-              <h3 class="text-size22 font-bold text-black">Protección PLUS</h3>
-              <p class="text-size14 text-black">Más respaldo</p>
-            </div>
-          </div>
-
-          <ul class="space-y-4 mb-8 flex-grow">
-            <li class="flex items-center gap-3 text-size14 text-black font-medium"><span class="text-blue-500"><img
-                  src="assets/imgs/check.svg" alt=""></span> Canon de arrendamiento</li>
-            <li class="flex items-center gap-3 text-size14 text-black font-medium"><span class="text-blue-500"><img
-                  src="assets/imgs/check.svg" alt=""></span> Cuota administración</li>
-            <li class="flex items-center gap-3 text-size14 text-black font-medium"><span class="text-blue-500"><img
-                  src="assets/imgs/check.svg" alt=""></span> Servicios públicos</li>
-            <li class="flex items-start gap-3 text-size14 text-black font-medium"><span class="text-blue-500"><img
-                  src="assets/imgs/check.svg" alt=""></span> Límite de indemnización: <span class="font-bold">12
-                meses</span></li>
-          </ul>
-
-          <div class=" pt-6 mb-8">
-            <h5 class="text-size14 font-extrabold uppercase tracking-widest mb-4">Coberturas Opcionales</h5>
-            <div class="space-y-3">
-              <div class="flex items-center gap-3 text-size14 font-bold text-blue-600"><span><img
-                    src="assets/imgs/+.svg" alt=""></span> Asistencia domiciliaria</div>
-              <div class="flex items-center gap-3 text-size14 font-bold text-blue-600"><span><img
-                    src="assets/imgs/+.svg" alt=""></span> Daños y faltantes</div>
-            </div>
-          </div>
-
-          <div class="mt-auto">
-            <p class="text-size14 text-gray-400 italic mb-4">Tomador: Propietario<br>Máximo valor del canon COP$: Sin
-              límite</p>
-            <button (click)="cotizar()" [ngClass]="planSeleccionado === 'balance' ? 'bg-[#4FC0B0]' : 'bg-[#BCC3CF]'"
-              class="w-full text-white font-bold py-4 rounded-xl mb-3  text-size16 transition-colors duration-300">
-              Cotizar seguro
-            </button>
-            <p class="text-size11 text-blueFour text-center font-medium">Pago único por la vigencia de tu contrato</p>
-          </div>
-        </div>
-
-        <div [ngClass]="{
-            'border-blueThree border-2 scale-105 shadow-2xl z-20': planSeleccionado === 'cero',
-            'border border-grayFive  opacity-80 grayscale-[20%] scale-95': planSeleccionado !== 'cero'
-          }" class="bg-white rounded-3xl p-8 border  flex flex-col transition-all duration-500 cursor-pointer"
-          (click)="selectPlan('cero')">
-
-          <div class="flex items-center gap-4 mb-6">
-            <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-3xl">
-              <img src="assets/imgs/diamond.svg" alt="">
-            </div>
-            <div>
-              <span class="text-size14 tracking-widest text-secondary font-bold">Plan Global</span>
-              <h3 class="text-size22 text-black font-bold">Tranquilidad 360°</h3>
-              <p class="text-size14 text-black text-gray-400">Todo incluido</p>
-            </div>
-          </div>
-
-          <ul class="space-y-4 mb-8 flex-grow">
-            <li class="flex items-center gap-3 text-size14 text-black font-medium"><span class="text-blue-500"><img
-                  src="assets/imgs/check.svg" alt=""></span> Canon de arrendamiento</li>
-            <li class="flex items-center gap-3 text-size14 text-black font-medium"><span class="text-blue-500"><img
-                  src="assets/imgs/check.svg" alt=""></span> Cuota administración</li>
-            <li class="flex items-center gap-3 text-size14 text-black font-medium"><span class="text-blue-500"><img
-                  src="assets/imgs/check.svg" alt=""></span> Servicios públicos</li>
-            <li class="flex items-start gap-3 text-size14 text-black font-medium"><span class="text-blue-500"><img
-                  src="assets/imgs/check.svg" alt=""></span> Límite de indemnización: <span class="font-bold">36
-                meses</span></li>
-          </ul>
-
-          <div class="pt-6 mb-8">
-            <h5 class="text-size14 font-extrabold uppercase tracking-widest mb-4">Coberturas Opcionales</h5>
-            <div class="space-y-3">
-              <div class="flex items-center gap-3 text-size14 text-black font-bold text-blue-600"><span><img
-                    src="assets/imgs/+.svg" alt=""></span> Asistencia domiciliaria</div>
-              <div class="flex items-center gap-3 text-size14 text-black font-bold text-blue-600"><span><img
-                    src="assets/imgs/+.svg" alt=""></span> Daños y faltantes</div>
-            </div>
-          </div>
-
-          <div class="mt-auto">
-            <p class="text-size14 text-gray-400 italic mb-4">Tomador: Propietario<br>Máximo valor del canon COP$: Sin
-              límite</p>
-            <button (click)="cotizar()" [ngClass]="planSeleccionado === 'cero' ? 'bg-[#4FC0B0]' : 'bg-[#BCC3CF]'"
-              class="w-full text-white font-bold py-4 rounded-xl mb-3 transition-colors duration-300">
-              Cotizar seguro
-            </button>
-            <p class="text-size11 text-blueFour text-center font-medium">Pago único por la vigencia de tu contrato</p>
-          </div>
-        </div>
+          </swiper-slide>
+        </swiper-container>
 
       </div>
   </div>

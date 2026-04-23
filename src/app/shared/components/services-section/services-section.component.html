@@ -3,15 +3,13 @@
     <img src="assets/imgs/blueBG.svg" alt="Fondo" class="w-full h-full object-cover object-bottom" />
   </div>
 
-<img 
-  src="assets/gifs/locals.gif" 
-  alt="Locales Arriendy"
-  class="img-overflow-fix absolute z-10 pointer-events-none
+  <img src="assets/gifs/locals.gif" alt="Locales Arriendy" class="img-overflow-fix absolute z-10 pointer-events-none
          block left-[-26%] -scale-x-100 w-[120px] top-[10%]
          xl:right-0 xl:left-auto xl:scale-x-100 xl:w-auto xl:top-auto xl:opacity-100" />
 
   <div class="max-w-6xl mx-auto px-4 relative z-20 w-full">
-    <h2 appScrollReveal class="font-inter text-white text-size18 md:text-size32 font-bold mb-10 pt-8 text-center md:text-left">
+    <h2 appScrollReveal
+      class="font-inter text-white text-size18 md:text-size32 font-bold mb-10 pt-8 text-center md:text-left">
       Descubre nuestros servicios
     </h2>
 
@@ -27,9 +25,9 @@
                 <img src="assets/imgs/owner.svg" alt="Para Propietarios" />
                 <h3 class="font-bold text-size24">Para Propietarios</h3>
               </div>
-              <p class="text-[#555555] text-size12 leading-tight px-2">
-                Convierte tu arriendo en ingresos garantizados y tu propiedad en una
-                inversión siempre protegida.
+              <p class="text-[#555555] text-size12 leading-tight">
+                Somos más que un Seguro de Arrendamiento. Entregamos soluciones prácticas para la administración de su
+                patrimonio.
               </p>
             </div>
 
@@ -38,34 +36,59 @@
                 <h4 class="font-bold text-size14">Características principales</h4>
                 <ul class="text-size14 leading-[1.3]">
                   <li class="flex items-start gap-2">
-                    <span>✓</span> Asesoría comercial y jurídica
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <span>✓</span> Elaboración contrato
-                  </li>
-                  <li class="flex items-start gap-2">
                     <span>✓</span> Estudio financiero de tú inquilino
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span>✓</span> Elaboración o revisión de contrato
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span>✓</span> Orientación jurídica
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span>✓</span> Restitución del inmueble
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span>✓</span> Asistencia domiciliaria
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span>✓</span> Cobertura de daños y faltantes.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span>✓</span> Sistema antifraude.
                   </li>
                 </ul>
               </div>
 
               <div class="mb-8">
                 <h4 class="font-bold text-size14 text-[#003366]">
-                  Beneficios adicionales
+                  Longevo APP (incluido)
                 </h4>
                 <ul class="text-size14 leading-[1.3]">
                   <li class="flex items-start gap-2">
-                    <span>✓</span> Oportunidad en la respuesta
+                    <span>✓</span> Desarrollo nuevos hábitos
                   </li>
                   <li class="flex items-start gap-2">
-                    <span>✓</span> Estudio ágil y acompañamiento integral
+                    <span>✓</span> Plan de entrenamiento físico
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span>✓</span> Retos de bienestar
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span>✓</span> Plan nutricional personalizado
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span>✓</span> Soporte en salud mental
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span>✓</span> Asesoría salud financiera
                   </li>
                 </ul>
               </div>
 
               <div class="mt-auto flex flex-col items-center">
-                <a href="#" class="text-[#0056b3] text-size14 underline mb-4 font-medium">Ver más detalles de las
+                <!-- <a href="#" class="text-[#0056b3] text-size14 underline mb-4 font-medium">Ver más detalles de las
                   coberturas</a>
+               -->
                 <button (click)="onQuoteClick()"
                   class="w-full bg-[#40B4A4] text-white font-bold py-3.5 rounded-xl hover:bg-[#369d8f] transition-all text-size14">
                   Cotizar seguro
@@ -84,8 +107,11 @@
                 <img src="assets/imgs/key.svg" alt="Para Inquilinos" />
                 <h3 class="font-bold text-size24">Para Inquilinos</h3>
               </div>
-              <p class="text-[#555555] text-size12 leading-tight px-4">
-                Realiza tu estudio de arrendamiento desde la comodidad de tu hogar.
+              <p class="text-[#555555] text-size12 leading-tight">
+                Realiza de forma simple tu estudio de capacidad financiera para arrendamiento, para acceder rápidamente
+                a tu próximo hogar o negocio.
+
+
               </p>
             </div>
 
@@ -96,7 +122,19 @@
                 </h4>
                 <ul class="text-size14">
                   <li class="flex items-start gap-2">
-                    <span>✓</span> Proceso 100% digital
+                    <span>✓</span> Sin salir de casa.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span>✓</span> Sin entregar documentos.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span>✓</span> Sin codeudores (según plan elegido).
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span>✓</span> Sin gastos de notaría.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span>✓</span> 30 días de vigencia.
                   </li>
                 </ul>
               </div>
@@ -107,28 +145,22 @@
                 </h4>
                 <ul class="text-size14 leading-[1.3]">
                   <li class="flex items-start gap-2">
-                    <span>✓</span> Sin trámites dispendiosos
+                    <span>✓</span> Todos los beneficios de la App Longevo.
                   </li>
                   <li class="flex items-start gap-2">
-                    <span>✓</span> Respuesta rápida
+                    <span>✓</span> Uso de asistencia domiciliaria.
                   </li>
                   <li class="flex items-start gap-2">
-                    <span>✓</span> Estudio revisado de forma ágil y simple
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <span>✓</span> Según el plan escogido sin codeudor o de 1 a 2
-                    codeudores, según el valor del canon.
-                  </li>
-                  <li class="flex items-start gap-2 text-[#0056b3]">
-                    <span>✓</span> ¿No consigues codeudor? No hay problema. Abre una
-                    Fiducuenta con Bancolombia y sigue adelante con tu solicitud
+                    <span>✓</span> Flexibilidad para respaldar tu contrato con codeudor, fiducia, carta standby o
+                    garantía mobiliaria.
                   </li>
                 </ul>
               </div>
 
               <div class="mt-auto flex flex-col items-center">
-                <a href="#" class="text-[#0056b3] text-size14 underline mb-4 font-medium">Ver más detalles de las
+                <!--  <a href="#" class="text-[#0056b3] text-size14 underline mb-4 font-medium">Ver más detalles de las
                   coberturas</a>
+              -->
                 <button routerLink="/estudio"
                   class="w-full bg-[#40B4A4] text-white font-bold py-3.5 rounded-xl text-size14">
                   Iniciar estudio
@@ -147,9 +179,8 @@
                 <img src="assets/imgs/people.svg" alt="Colectivo" />
                 <h3 class="font-bold text-size24">Colectivo</h3>
               </div>
-              <p class="text-[#555555] text-size12 leading-tight px-4">
-                ¿Eres una persona o empresa con la posibilidad de proteger el
-                arriendo de más de 25 inmuebles?
+              <p class="text-[#555555] text-size12 leading-tight">
+                ¿Eres una persona o empresa con la posibilidad de proteger el arriendo de más de 25 inmuebles?
               </p>
             </div>
 
@@ -158,26 +189,24 @@
                 <h4 class="font-bold text-size14">Ideal para</h4>
                 <ul class="text-size14 leading-[1.3]">
                   <li class="flex items-start gap-2">
-                    <span>✓</span> Inversionistas
+                    <span>✓</span> Inversionistas.
                   </li>
                   <li class="flex items-start gap-2">
-                    <span>✓</span> Inmobiliarias
+                    <span>✓</span> Inmobiliarias.
                   </li>
                   <li class="flex items-start gap-2">
-                    <span>✓</span> Cooperativas y fondos de empleados
+                    <span>✓</span> Administraciones de propiedad horizontal.
                   </li>
                   <li class="flex items-start gap-2">
-                    <span>✓</span> Constructoras
+                    <span>✓</span> Cooperativas y fondos de empleados.
                   </li>
                   <li class="flex items-start gap-2">
-                    <span>✓</span> Centros comerciales
+                    <span>✓</span> Constructoras y proyectos inmobiliarios.
                   </li>
                   <li class="flex items-start gap-2">
-                    <span>✓</span> Proyectos inmobiliarios
+                    <span>✓</span> Centros comerciales.
                   </li>
-                  <li class="flex items-start gap-2">
-                    <span>✓</span> Administraciones de propiedad horizontal
-                  </li>
+
                 </ul>
               </div>
 
@@ -187,17 +216,23 @@
                 </h4>
                 <ul class="text-size14 leading-[1.3]">
                   <li class="flex items-start gap-2">
-                    <span>✓</span> Costos diferenciales
+                    <span>✓</span> Costos diferenciales.
                   </li>
                   <li class="flex items-start gap-2">
                     <span>✓</span> Herramienta tecnológica especializada para la
-                    administrativa de sus activos
+                    administrativa de sus activos.
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span>✓</span>Empresas Sura: ecosistema de desarrollo empresarial que ofrece asesoría, diagnóstico y
+                    acompañamiento en mercadeo, talento humano, transformación digital, modelo operativo, legal, gestión
+                    financiera y ambiental.
                   </li>
                 </ul>
               </div>
 
               <div class="mt-auto flex flex-col items-center">
-                <a class="text-[#0056b3] text-size14 underline mb-4 font-medium">Ver más detalles de las coberturas</a>
+             <!--   <a class="text-[#0056b3] text-size14 underline mb-4 font-medium">Ver más detalles de las coberturas</a>
+                -->
                 <button routerLink="/registro"
                   class="w-full bg-[#40B4A4] text-white font-bold py-3.5 rounded-xl text-size14">
                   Más información
