@@ -14,7 +14,7 @@ export class SuraStatsComponent implements AfterViewInit, OnDestroy {
   // Definimos la Signal con los datos iniciales
   public stats = signal([
     {
-      target: 5248,
+      target: 50248,
       current: 0,
       displayNumber: '0',
       title: 'Propietarios e Inversionistas',
