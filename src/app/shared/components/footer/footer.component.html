@@ -1,59 +1,83 @@
 <footer class="w-full bg-white font-inter">
-  <div class="w-full bg-blueTwo py-2 px-4 text-center">
-    <p class="text-white text-size16  font-medium">
+  <div class="w-full bg-blueTwo py-3 px-4 text-center">
+    <p class="text-white text-sm md:text-size16 font-medium">
       <span class="font-bold">Arriendy</span> es un servicio especializado de la Promotora de Arrendamientos
       <a href="#" class="underline text-secondary">SEGUROS ALDERECHO LTDA.</a>
     </p>
   </div>
 
-  <div class="max-w-[1440px] mx-auto px-20 py-9 h-[200px]">
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-
-      <div
-        class="md:col-span-5 flex items-center justify-center md:justify-start gap-8 border-b md:border-b-0 pb-8 md:pb-0">
-        <img src="assets/imgs/logos.svg" alt="Arriendy Logo" class="h-12 w-auto" />
+  <div class="max-w-[1440px] mx-auto px-6 md:px-20 py-10 md:py-16">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+      
+      <div class="md:col-span-4 flex flex-col items-center md:items-start gap-6">
+        <img src="assets/imgs/logos.svg" alt="Arriendy Logo" class="h-10 md:h-12 w-auto" />
+        <p class="text-grayTwo text-sm text-center md:text-left max-w-xs md:block hidden">
+          Simplificamos el mundo de los arrendamientos con tecnología y respaldo humano.
+        </p>
+        <div class="flex gap-4">
+          <div class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-blueTwo hover:bg-secondary hover:text-white transition-all cursor-pointer">
+            <ng-icon name="lucideInstagram" class="text-lg"></ng-icon>
+          </div>
+          <div class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-blueTwo hover:bg-secondary hover:text-white transition-all cursor-pointer">
+            <ng-icon name="lucideLinkedin" class="text-lg"></ng-icon>
+          </div>
+        </div>
       </div>
 
-      <div class="md:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-8">
-
-        <div>
-          <h5 class="text-[#1a3e48] font-bold text-sm tracking-widest uppercase mb-2">Producto</h5>
-          <ul class="space-y-4 text-gray-500 text-sm font-medium">
-            <li><a href="#" class="hover:text-arriendy-teal transition-colors">Cómo funciona</a></li>
-            <li><a href="#" class="hover:text-arriendy-teal transition-colors">Planes</a></li>
-            <li><a href="#" class="hover:text-arriendy-teal transition-colors">Coberturas</a></li>
-            <li><a href="#" class="hover:text-arriendy-teal transition-colors">Preguntas frecuentes</a></li>
+      <div class="md:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-0 md:gap-8">
+        
+        <div class="border-b border-gray-100 md:border-none">
+          <button (click)="toggleFooterSection('producto')" 
+                  class="w-full flex justify-between items-center py-4 md:py-0 md:mb-6 outline-none">
+            <h5 class="text-blueTwo font-bold text-xs md:text-sm tracking-widest uppercase">Producto</h5>
+            <ng-icon [name]="activeSection === 'producto' ? 'lucideMinus' : 'lucidePlus'" 
+                     class="md:hidden text-secondary"></ng-icon>
+          </button>
+          <ul [ngClass]="{'hidden md:block': activeSection !== 'producto', 'block pb-6': activeSection === 'producto'}" 
+              class="space-y-4 text-gray-500 text-sm font-medium animate-fade-in">
+            <li><a href="#" class="hover:text-secondary transition-colors">Cómo funciona</a></li>
+            <li><a href="#" class="hover:text-secondary transition-colors">Planes</a></li>
+            <li><a href="#" class="hover:text-secondary transition-colors">Coberturas</a></li>
+            <li><a href="#" class="hover:text-secondary transition-colors">Preguntas frecuentes</a></li>
           </ul>
         </div>
 
-        <div>
-          <h5 class="text-[#1a3e48] font-bold text-sm tracking-widest uppercase mb-6">Soporte</h5>
-          <ul class="space-y-4 text-gray-500 text-sm font-medium">
-            <li class="flex items-center gap-2">
-              <ng-icon name="lucideMessageCircleMore" class="w-4 h-4 text-gray-400"></ng-icon>
-              <a href="#" class="hover:text-arriendy-teal transition-colors">Chat en vivo</a>
+        <div class="border-b border-gray-100 md:border-none">
+          <button (click)="toggleFooterSection('soporte')" 
+                  class="w-full flex justify-between items-center py-4 md:py-0 md:mb-6 outline-none">
+            <h5 class="text-blueTwo font-bold text-xs md:text-sm tracking-widest uppercase">Soporte</h5>
+            <ng-icon [name]="activeSection === 'soporte' ? 'lucideMinus' : 'lucidePlus'" 
+                     class="md:hidden text-secondary"></ng-icon>
+          </button>
+          <ul [ngClass]="{'hidden md:block': activeSection !== 'soporte', 'block pb-6': activeSection === 'soporte'}" 
+              class="space-y-4 text-gray-500 text-sm font-medium animate-fade-in">
+            <li class="flex items-center gap-3">
+              <ng-icon name="lucideMessageCircle" class="text-secondary"></ng-icon>
+              <a href="#" class="hover:text-secondary transition-colors">Chat en vivo</a>
             </li>
-            <li class="flex items-center gap-2">
-              <ng-icon name="lucidePhone" class="w-4 h-4 text-gray-500 fill-current"></ng-icon>
-              <a href="tel:018000123123" class="hover:text-arriendy-teal transition-colors">01 8000 123 123</a>
+            <li class="flex items-center gap-3">
+              <ng-icon name="lucidePhone" class="text-secondary"></ng-icon>
+              <a href="tel:018000123123" class="hover:text-secondary transition-colors">01 8000 123 123</a>
             </li>
-            <li class="flex items-center gap-2">
-              <ng-icon name="lucideMail" class="w-4 h-4 text-gray-400"></ng-icon>
-              <a href="mailto:hola@arriendy.com"
-                class="hover:text-arriendy-teal transition-colors">hola&#64;arriendy.com</a>
-            </li>
-            <li>
-              <a href="#" class="hover:text-arriendy-teal transition-colors">Centro de ayuda</a>
+            <li class="flex items-center gap-3">
+              <ng-icon name="lucideMail" class="text-secondary"></ng-icon>
+              <a href="mailto:hola@arriendy.com" class="hover:text-secondary transition-colors">hola&#64;arriendy.com</a>
             </li>
           </ul>
         </div>
 
-        <div>
-          <h5 class="text-[#1a3e48] font-bold text-sm tracking-widest uppercase mb-6">Seguridad</h5>
-          <ul class="space-y-4 text-gray-500 text-sm font-medium">
-            <li><a href="#" class="hover:text-arriendy-teal transition-colors">Privacidad</a></li>
-            <li><a href="#" class="hover:text-arriendy-teal transition-colors">Términos legales</a></li>
-            <li><a href="#" class="hover:text-arriendy-teal transition-colors">Uso de cookies</a></li>
+        <div class="md:border-none">
+          <button (click)="toggleFooterSection('seguridad')" 
+                  class="w-full flex justify-between items-center py-4 md:py-0 md:mb-6 outline-none">
+            <h5 class="text-blueTwo font-bold text-xs md:text-sm tracking-widest uppercase">Seguridad</h5>
+            <ng-icon [name]="activeSection === 'seguridad' ? 'lucideMinus' : 'lucidePlus'" 
+                     class="md:hidden text-secondary"></ng-icon>
+          </button>
+          <ul [ngClass]="{'hidden md:block': activeSection !== 'seguridad', 'block pb-6': activeSection === 'seguridad'}" 
+              class="space-y-4 text-gray-500 text-sm font-medium animate-fade-in">
+            <li><a href="#" class="hover:text-secondary transition-colors">Privacidad</a></li>
+            <li><a href="#" class="hover:text-secondary transition-colors">Términos legales</a></li>
+            <li><a href="#" class="hover:text-secondary transition-colors">Uso de cookies</a></li>
           </ul>
         </div>
 
@@ -61,10 +85,10 @@
     </div>
   </div>
 
-  <div class="w-full  border-gray-100">
-    <div class="max-w-[1440px] pb-3">
-      <p class="ml-5 text-size10 md:text-xs text-grayEight font-medium text-left">
-        © 2026 Arriendy S.A. Todos los derechos reservados. Vigilado por la Superintendencia Financiera.
+  <div class="w-full bg-gray-50 py-6 border-t border-gray-100">
+    <div class="max-w-[1440px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-[10px] md:text-xs text-gray-400 font-medium text-center md:text-left">
+        © 2026 Arriendy S.A. Todos los derechos reservados. Vigilado por la Superintendencia Financiera de Colombia.
       </p>
     </div>
   </div>
