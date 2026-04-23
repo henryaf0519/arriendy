@@ -1,234 +1,213 @@
 <section class="w-full relative h-[870px]">
   <div class="absolute inset-0 z-0">
-    <img
-      src="assets/imgs/blueBG.svg"
-      alt="Fondo"
-      class="w-full h-full object-cover object-bottom"
-    />
+    <img src="assets/imgs/blueBG.svg" alt="Fondo" class="w-full h-full object-cover object-bottom" />
   </div>
 
-  <img
-    src="assets/gifs/locals.gif"
-    alt=""
-    class="img-overflow-fix absolute right-0 z-10 hidden xl:block pointer-events-none"
-  />
+<img 
+  src="assets/gifs/locals.gif" 
+  alt="Locales Arriendy"
+  class="img-overflow-fix absolute z-10 pointer-events-none
+         block left-[-26%] -scale-x-100 w-[120px] top-[10%]
+         xl:right-0 xl:left-auto xl:scale-x-100 xl:w-auto xl:top-auto xl:opacity-100" />
 
   <div class="max-w-6xl mx-auto px-4 relative z-20 w-full">
-    <h2 appScrollReveal
-      class="font-inter text-white text-[32px] md:text-[40px] font-bold mb-10 pt-8"
-    >
+    <h2 appScrollReveal class="font-inter text-white text-size18 md:text-size32 font-bold mb-10 pt-8 text-center md:text-left">
       Descubre nuestros servicios
     </h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
-      <div 
-        class="bg-white rounded-3xl flex flex-col overflow-hidden shadow-xl border border-gray-100 py-3 px-3"
-      >
-        <div
-          class="bg-[#FCD8DA] p-8 text-center min-h-[121px] flex flex-col justify-center rounded-t-xl py-2 px-5 h-32"
-        >
+    <div class="w-full relative z-10 min-h-[450px]"> <swiper-container #plansSwiper init="false"
+        class="plans-swiper w-full">
+        <swiper-slide class="px-2 py-4 md:p-0 h-full">
+
           <div
-            class="flex items-center justify-center gap-3 mb-3 text-[#333333]"
-          >
-            <img src="assets/imgs/owner.svg" alt="Para Propietarios" />
-            <h3 class="font-bold text-size24">Para Propietarios</h3>
-          </div>
-          <p class="text-[#555555] text-size12 leading-tight px-2">
-            Convierte tu arriendo en ingresos garantizados y tu propiedad en una
-            inversión siempre protegida.
-          </p>
-        </div>
+            class="bg-white rounded-3xl flex flex-col overflow-hidden shadow-xl  w-[341px] md:w-[341px] h-[570px] border border-gray-100 py-3 px-3">
+            <div
+              class="bg-[#FCD8DA] p-8 text-center min-h-[121px] flex flex-col justify-center rounded-t-xl py-2 px-5 h-32">
+              <div class="flex items-center justify-center gap-3 mb-3 text-[#333333]">
+                <img src="assets/imgs/owner.svg" alt="Para Propietarios" />
+                <h3 class="font-bold text-size24">Para Propietarios</h3>
+              </div>
+              <p class="text-[#555555] text-size12 leading-tight px-2">
+                Convierte tu arriendo en ingresos garantizados y tu propiedad en una
+                inversión siempre protegida.
+              </p>
+            </div>
 
-        <div class="py-6 px-3 flex flex-col flex-grow text-[#444444]">
-          <div class="mb-6">
-            <h4 class="font-bold text-size14">Características principales</h4>
-            <ul class="text-size14 leading-[1.3]">
-              <li class="flex items-start gap-2">
-                <span>✓</span> Asesoría comercial y jurídica
-              </li>
-              <li class="flex items-start gap-2">
-                <span>✓</span> Elaboración contrato
-              </li>
-              <li class="flex items-start gap-2">
-                <span>✓</span> Estudio financiero de tú inquilino
-              </li>
-            </ul>
-          </div>
+            <div class="py-6 px-3 flex flex-col flex-grow text-[#444444]">
+              <div class="mb-6">
+                <h4 class="font-bold text-size14">Características principales</h4>
+                <ul class="text-size14 leading-[1.3]">
+                  <li class="flex items-start gap-2">
+                    <span>✓</span> Asesoría comercial y jurídica
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span>✓</span> Elaboración contrato
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span>✓</span> Estudio financiero de tú inquilino
+                  </li>
+                </ul>
+              </div>
 
-          <div class="mb-8">
-            <h4 class="font-bold text-size14 text-[#003366]">
-              Beneficios adicionales
-            </h4>
-            <ul class="text-size14 leading-[1.3]">
-              <li class="flex items-start gap-2">
-                <span>✓</span> Oportunidad en la respuesta
-              </li>
-              <li class="flex items-start gap-2">
-                <span>✓</span> Estudio ágil y acompañamiento integral
-              </li>
-            </ul>
-          </div>
+              <div class="mb-8">
+                <h4 class="font-bold text-size14 text-[#003366]">
+                  Beneficios adicionales
+                </h4>
+                <ul class="text-size14 leading-[1.3]">
+                  <li class="flex items-start gap-2">
+                    <span>✓</span> Oportunidad en la respuesta
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span>✓</span> Estudio ágil y acompañamiento integral
+                  </li>
+                </ul>
+              </div>
 
-          <div class="mt-auto flex flex-col items-center">
-            <a
-              href="#"
-              class="text-[#0056b3] text-size14 underline mb-4 font-medium"
-              >Ver más detalles de las coberturas</a
-            >
-            <button
-              (click)="onQuoteClick()"
-              class="w-full bg-[#40B4A4] text-white font-bold py-3.5 rounded-xl hover:bg-[#369d8f] transition-all text-size14"
-            >
-              Cotizar seguro
-            </button>
+              <div class="mt-auto flex flex-col items-center">
+                <a href="#" class="text-[#0056b3] text-size14 underline mb-4 font-medium">Ver más detalles de las
+                  coberturas</a>
+                <button (click)="onQuoteClick()"
+                  class="w-full bg-[#40B4A4] text-white font-bold py-3.5 rounded-xl hover:bg-[#369d8f] transition-all text-size14">
+                  Cotizar seguro
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </swiper-slide>
 
-      <div 
-        class="bg-white rounded-3xl flex flex-col overflow-hidden shadow-xl border-2 border-transparent hover:border-[#40B4A4] transition-all py-3 px-3"
-      >
-        <div
-          class="bg-[#DFEAEF] p-8 text-center min-h-[121px] flex flex-col justify-center rounded-t-xl py-2 px-5 h-32"
-        >
+        <swiper-slide class="px-2 py-4 md:p-0 h-full">
           <div
-            class="flex items-center justify-center gap-3 mb-3 text-[#333333]"
-          >
-            <img src="assets/imgs/key.svg" alt="Para Inquilinos" />
-            <h3 class="font-bold text-size24">Para Inquilinos</h3>
-          </div>
-          <p class="text-[#555555] text-size12 leading-tight px-4">
-            Realiza tu estudio de arrendamiento desde la comodidad de tu hogar.
-          </p>
-        </div>
+            class="bg-white rounded-3xl flex flex-col overflow-hidden shadow-xl border-2 border-transparent hover:border-[#40B4A4]  w-[341px] md:w-[341px] h-[570px] transition-all py-3 px-3">
+            <div
+              class="bg-[#DFEAEF] p-8 text-center min-h-[121px] flex flex-col justify-center rounded-t-xl py-2 px-5 h-32">
+              <div class="flex items-center justify-center gap-3 mb-3 text-[#333333]">
+                <img src="assets/imgs/key.svg" alt="Para Inquilinos" />
+                <h3 class="font-bold text-size24">Para Inquilinos</h3>
+              </div>
+              <p class="text-[#555555] text-size12 leading-tight px-4">
+                Realiza tu estudio de arrendamiento desde la comodidad de tu hogar.
+              </p>
+            </div>
 
-        <div class="py-6 px-3 flex flex-col flex-grow text-[#444444]">
-          <div class="mb-6">
-            <h4 class="font-bold text-size14 leading-[1.3]">
-              Características principales
-            </h4>
-            <ul class="text-size14">
-              <li class="flex items-start gap-2">
-                <span>✓</span> Proceso 100% digital
-              </li>
-            </ul>
-          </div>
+            <div class="py-6 px-3 flex flex-col flex-grow text-[#444444]">
+              <div class="mb-6">
+                <h4 class="font-bold text-size14 leading-[1.3]">
+                  Características principales
+                </h4>
+                <ul class="text-size14">
+                  <li class="flex items-start gap-2">
+                    <span>✓</span> Proceso 100% digital
+                  </li>
+                </ul>
+              </div>
 
-          <div class="mb-8">
-            <h4 class="font-bold text-size14 text-[#003366]">
-              Beneficios adicionales
-            </h4>
-            <ul class="text-size14 leading-[1.3]">
-              <li class="flex items-start gap-2">
-                <span>✓</span> Sin trámites dispendiosos
-              </li>
-              <li class="flex items-start gap-2">
-                <span>✓</span> Respuesta rápida
-              </li>
-              <li class="flex items-start gap-2">
-                <span>✓</span> Estudio revisado de forma ágil y simple
-              </li>
-              <li class="flex items-start gap-2">
-                <span>✓</span> Según el plan escogido sin codeudor o de 1 a 2
-                codeudores, según el valor del canon.
-              </li>
-              <li class="flex items-start gap-2 text-[#0056b3]">
-                <span>✓</span> ¿No consigues codeudor? No hay problema. Abre una
-                Fiducuenta con Bancolombia y sigue adelante con tu solicitud
-              </li>
-            </ul>
-          </div>
+              <div class="mb-8">
+                <h4 class="font-bold text-size14 text-[#003366]">
+                  Beneficios adicionales
+                </h4>
+                <ul class="text-size14 leading-[1.3]">
+                  <li class="flex items-start gap-2">
+                    <span>✓</span> Sin trámites dispendiosos
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span>✓</span> Respuesta rápida
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span>✓</span> Estudio revisado de forma ágil y simple
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span>✓</span> Según el plan escogido sin codeudor o de 1 a 2
+                    codeudores, según el valor del canon.
+                  </li>
+                  <li class="flex items-start gap-2 text-[#0056b3]">
+                    <span>✓</span> ¿No consigues codeudor? No hay problema. Abre una
+                    Fiducuenta con Bancolombia y sigue adelante con tu solicitud
+                  </li>
+                </ul>
+              </div>
 
-          <div class="mt-auto flex flex-col items-center">
-            <a
-              href="#"
-              class="text-[#0056b3] text-size14 underline mb-4 font-medium"
-              >Ver más detalles de las coberturas</a
-            >
-            <button
-              routerLink="/estudio"
-              class="w-full bg-[#40B4A4] text-white font-bold py-3.5 rounded-xl text-size14"
-            >
-              Iniciar estudio
-            </button>
+              <div class="mt-auto flex flex-col items-center">
+                <a href="#" class="text-[#0056b3] text-size14 underline mb-4 font-medium">Ver más detalles de las
+                  coberturas</a>
+                <button routerLink="/estudio"
+                  class="w-full bg-[#40B4A4] text-white font-bold py-3.5 rounded-xl text-size14">
+                  Iniciar estudio
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </swiper-slide>
 
-      <div 
-        class="bg-white rounded-3xl flex flex-col overflow-hidden shadow-xl border border-gray-100 py-3 px-3"
-      >
-        <div
-          class="bg-[#FEEFC4] p-8 text-center min-h-[121px] flex flex-col justify-center rounded-t-xl py-2 px-5 h-32"
-        >
+        <swiper-slide class="px-2 py-4 md:p-0 h-full">
           <div
-            class="flex items-center justify-center gap-3 mb-3 text-[#333333]"
-          >
-            <img src="assets/imgs/people.svg" alt="Colectivo" />
-            <h3 class="font-bold text-size24">Colectivo</h3>
-          </div>
-          <p class="text-[#555555] text-size12 leading-tight px-4">
-            ¿Eres una persona o empresa con la posibilidad de proteger el
-            arriendo de más de 25 inmuebles?
-          </p>
-        </div>
+            class="bg-white rounded-3xl flex flex-col overflow-hidden  w-[341px] md:w-[341px] h-[570px] shadow-xl border border-gray-100 py-3 px-3">
+            <div
+              class="bg-[#FEEFC4] p-8 text-center min-h-[121px] flex flex-col justify-center rounded-t-xl py-2 px-5 h-32">
+              <div class="flex items-center justify-center gap-3 mb-3 text-[#333333]">
+                <img src="assets/imgs/people.svg" alt="Colectivo" />
+                <h3 class="font-bold text-size24">Colectivo</h3>
+              </div>
+              <p class="text-[#555555] text-size12 leading-tight px-4">
+                ¿Eres una persona o empresa con la posibilidad de proteger el
+                arriendo de más de 25 inmuebles?
+              </p>
+            </div>
 
-        <div class="py-6 px-3 flex flex-col flex-grow text-[#444444]">
-          <div class="mb-6">
-            <h4 class="font-bold text-size14">Ideal para</h4>
-            <ul class="text-size14 leading-[1.3]">
-              <li class="flex items-start gap-2">
-                <span>✓</span> Inversionistas
-              </li>
-              <li class="flex items-start gap-2">
-                <span>✓</span> Inmobiliarias
-              </li>
-              <li class="flex items-start gap-2">
-                <span>✓</span> Cooperativas y fondos de empleados
-              </li>
-              <li class="flex items-start gap-2">
-                <span>✓</span> Constructoras
-              </li>
-              <li class="flex items-start gap-2">
-                <span>✓</span> Centros comerciales
-              </li>
-              <li class="flex items-start gap-2">
-                <span>✓</span> Proyectos inmobiliarios
-              </li>
-              <li class="flex items-start gap-2">
-                <span>✓</span> Administraciones de propiedad horizontal
-              </li>
-            </ul>
-          </div>
+            <div class="py-6 px-3 flex flex-col flex-grow text-[#444444]">
+              <div class="mb-6">
+                <h4 class="font-bold text-size14">Ideal para</h4>
+                <ul class="text-size14 leading-[1.3]">
+                  <li class="flex items-start gap-2">
+                    <span>✓</span> Inversionistas
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span>✓</span> Inmobiliarias
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span>✓</span> Cooperativas y fondos de empleados
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span>✓</span> Constructoras
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span>✓</span> Centros comerciales
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span>✓</span> Proyectos inmobiliarios
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span>✓</span> Administraciones de propiedad horizontal
+                  </li>
+                </ul>
+              </div>
 
-          <div class="mb-8">
-            <h4 class="font-bold text-size14 text-[#003366]">
-              Beneficios adicionales
-            </h4>
-            <ul class="text-size14 leading-[1.3]">
-              <li class="flex items-start gap-2">
-                <span>✓</span> Costos diferenciales
-              </li>
-              <li class="flex items-start gap-2">
-                <span>✓</span> Herramienta tecnológica especializada para la
-                administrativa de sus activos
-              </li>
-            </ul>
-          </div>
+              <div class="mb-8">
+                <h4 class="font-bold text-size14 text-[#003366]">
+                  Beneficios adicionales
+                </h4>
+                <ul class="text-size14 leading-[1.3]">
+                  <li class="flex items-start gap-2">
+                    <span>✓</span> Costos diferenciales
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span>✓</span> Herramienta tecnológica especializada para la
+                    administrativa de sus activos
+                  </li>
+                </ul>
+              </div>
 
-          <div class="mt-auto flex flex-col items-center">
-            <a class="text-[#0056b3] text-size14 underline mb-4 font-medium"
-              >Ver más detalles de las coberturas</a
-            >
-            <button
-              routerLink="/registro"
-              class="w-full bg-[#40B4A4] text-white font-bold py-3.5 rounded-xl text-size14"
-            >
-              Más información
-            </button>
+              <div class="mt-auto flex flex-col items-center">
+                <a class="text-[#0056b3] text-size14 underline mb-4 font-medium">Ver más detalles de las coberturas</a>
+                <button routerLink="/registro"
+                  class="w-full bg-[#40B4A4] text-white font-bold py-3.5 rounded-xl text-size14">
+                  Más información
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </swiper-slide>
+      </swiper-container>
+
     </div>
   </div>
 </section>
