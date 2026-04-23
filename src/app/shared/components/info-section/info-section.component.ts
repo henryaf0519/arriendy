@@ -19,31 +19,36 @@ register();
   styleUrls: ['./info-section.component.scss'],
 })
 export class InfoSectionComponent implements AfterViewInit {
-
+  
   benefits = [
     {
       title: 'SÓLO PAGAS UNA VEZ',
-      desc: 'Para proteger todos los meses de arriendo. (50% de un sólo cánon)',
+      desc: 'Realiza un pago único anual que te brindará cobertura por toda la vigencia del contrato. ¡Sin mensualidades!',
       icon: 'assets/imgs/coins.svg',
     },
     {
       title: 'NO SOLO ASEGURAS TU INGRESO MENSUAL',
-      desc: 'También los servicios públicos, las cuotas de administración y posibles daños o faltantes.',
+      desc: 'También las deudas de servicios públicos, cuotas de administración y posibles daños o faltantes a tu inmueble.',
       icon: 'assets/imgs/coins.svg',
     },
     {
-      title: 'CUENTAS CON ASISTENCIA DOMICILIARIA',
-      desc: 'Propietarios e inquilinos acceden a una línea de soporte para solucionar incidentes del inmueble.',
+      title: 'OBTIENES ASISTENCIA DOMICILIARIA',
+      desc: 'Sura envía especialistas para atender emergencias de plomería, electricidad, cerrajería, vidrios y vigilancia.',
       icon: 'assets/imgs/coins.svg',
     },
     {
       title: 'ACOMPAÑAMIENTO LEGAL INCLUIDO',
-      desc: 'Ayudamos a hacer las cosas al derecho con contratos conformes a la ley, para seguridad de propietarios e inquilinos.',
+      desc: 'Verificación de contrato y orientación legal en derecho civil, familiar, penal, administrativo y laboral.',
       icon: 'assets/imgs/coins.svg',
     },
     {
-      title: 'BENEFICIOS CON INMOBILIARIAS ALIADAS',
-      desc: '¿Deseas delegar completamente la administración de tu contrato de arrendamiento? Tenemos una solución para ti.',
+      title: 'PROTECCIÓN ANTE DAÑOS Y FALTANTES',
+      desc: 'Garantía de que no asumirás pérdidas por daños o faltantes en los elementos fijos de tu propiedad al recibirla.',
+      icon: 'assets/imgs/coins.svg',
+    },
+    {
+      title: 'RESTITUCIÓN DEL INMUEBLE',
+      desc: 'Sura asume todo el proceso jurídico o extrajudicial para recuperar tu propiedad sin límite de meses.',
       icon: 'assets/imgs/coins.svg',
     },
   ];
