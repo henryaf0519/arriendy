@@ -1,38 +1,41 @@
 <section class="w-full">
->
-  <div class="mt-20 bg-third relative min-h-[655px] flex flex-col items-center pt-20 ">
+  <div class="mt-20 bg-third relative min-h-[655px] flex flex-col items-center  md:pt-20 ">
     <div class="absolute bottom-0 left-0 hidden lg:block z-0">
       <img src="assets/gifs/home.gif" alt="Edificio" class="w-full h-auto object-contain object-left-bottom" />
     </div>
 
     <div class="text-center mb-16 relative z-10 px-4">
-      <h2 appScrollReveal class="font-inter text-[32px] font-bold text-[#1a3e48] leading-tight">
+      <h2 appScrollReveal class="font-inter text-size18 md:text-size28 font-bold text-[#1a3e48] leading-tight">
         ¿Qué deberías saber del seguro <br />
         de arrendamiento de <span class="text-blueMain">SURA</span>?
       </h2>
     </div>
 
-    <div class="w-full max-w-[1400px] relative z-10">
-      <swiper-container init="false" class="mySwiper info-swiper">
-        <swiper-slide *ngFor="let item of benefits" class="max-w-[90%] md:max-w-[680px] py-10">
-          <div class="bg-white rounded-[32px] p-5 shadow-xl flex items-center gap-10  h-[233px]  w-[499px]">
-            <img [src]="item.icon" [alt]="item.title" class="w-32 h-32 object-contain shrink-0" />
-            <div>
-              <h4 class="font-inter font-bold text-[#1a3e48] text-[24px] mb-3 leading-tight">
-                {{ item.title }}
-              </h4>
-              <p class="text-gray-500 text-[16px] leading-relaxed font-inter font-normal">
-                {{ item.desc }}
-              </p>
-            </div>
-          </div>
-        </swiper-slide>
-      </swiper-container>
-    </div>
+  <div class="w-full max-w-[1400px] relative z-10">
+  <swiper-container init="false" class="mySwiper info-swiper">
+    <swiper-slide *ngFor="let item of benefits" class="max-w-[90%] md:max-w-[680px] py-10">
+      
+      <div class="bg-white rounded-[32px] p-6 shadow-xl flex flex-col md:flex-row items-center md:items-center gap-4 md:gap-10 h-[233px] w-[301px] md:w-[499px] mx-auto md:mx-0">
+        
+        <img [src]="item.icon" [alt]="item.title" class="w-20 h-20 md:w-32 md:h-32 object-contain shrink-0" />
+        
+        <div class="text-center md:text-left">
+          <h4 class="font-inter font-bold text-[#1a3e48] text-[18px] md:text-[24px] mb-2 md:mb-3 leading-tight">
+            {{ item.title }}
+          </h4>
+          <p class="text-gray-500 text-[14px] md:text-[16px] leading-tight md:leading-relaxed font-inter font-normal line-clamp-3 md:line-clamp-none">
+            {{ item.desc }}
+          </p>
+        </div>
 
-    <div class="w-full max-w-4xl flex items-center justify-center gap-10 mt-6 z-20 pb-10">
+      </div>
+    </swiper-slide>
+  </swiper-container>
+</div>
+
+    <div class="w-full max-w-4xl flex items-center justify-center gap-1 md:gap-10 mt-6 z-20 pb-10">
       <button
-        class="info-prev bg-white w-[135px] h-[36px] flex items-center justify-center rounded-2xl shadow-sm border border-grayFive hover:bg-gray-50 transition-all shrink-0">
+        class="info-prev bg-white w-[46px] h-[36px] md:w-[135px] md:h-[36px] flex items-center justify-center rounded-2xl shadow-sm border border-grayFive hover:bg-gray-50 transition-all shrink-0">
         <svg class="w-5 h-5 text-[#5B787D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
         </svg>
@@ -46,7 +49,7 @@
       </div>
 
       <button
-        class="info-next bg-arriendy-teal w-[135px] h-[36px] flex items-center justify-center rounded-2xl shadow-md hover:bg-arriendy-dark transition-all text-white shrink-0">
+        class="info-next bg-arriendy-teal w-[46px] h-[36px] md:w-[135px]  md:h-[36px] flex items-center justify-center rounded-2xl shadow-md hover:bg-arriendy-dark transition-all text-white shrink-0">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
         </svg>
