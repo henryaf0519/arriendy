@@ -87,28 +87,29 @@
 
               </ul>
 
-              <div class="pt-6  mt-10 mb-2">
+              <div class="pt-6 mb-8">
                 <h5 class="text-size12  text-black font-bold uppercase tracking-widest mb-3">Coberturas Opcionales</h5>
-                <div class="flex items-center gap-3 text-size12 font-medium text-black"><span><img
+                <div class="space-y-3">
+                  <div class="flex items-center gap-3 text-size12 font-medium text-black"><span><img
                       src="assets/imgs/+.svg" alt=""></span> Asistencia domiciliaria.</div>
 
                 <div class="flex items-center gap-3 text-size12 font-medium text-grayThree"><span><img
                       src="assets/imgs/x.svg" alt=""></span> Daños y faltantes al inventario.</div>
-              </div>
 
-              <div class="mt-auto">
-                <p class="text-size14 text-gray-400 italic mb-4">Tomador: Propietario<br>Máximo valor del canon COP$:
-                  Sin
-                  límite</p>
-                <button (click)="onQuoteClick()"
-                  [ngClass]="planSeleccionado === 'esencial' ? 'bg-secondary' : 'bg-grayFour'"
-                  class="w-full text-white text-size16 font-bold py-4 rounded-xl mb-3 transition-colors duration-300">
-                  Cotizar seguro
-                </button>
-                <p class="text-size11 text-blueFour text-center font-medium">Ideal para quienes solo buscan proteger lo
-                  esencial, el canon.
-                </p>
               </div>
+               </div>
+
+                <div class="mt-auto">
+                  <button (click)="onQuoteClick()"
+                    [ngClass]="planSeleccionado === 'esencial' ? 'bg-secondary' : 'bg-grayFour'"
+                    class="w-full text-white text-size16 font-bold py-4 rounded-xl mb-3 transition-colors duration-300">
+                    Cotizar seguro
+                  </button>
+                  <p class="text-size11 text-blueFour text-center font-medium">Ideal para quienes solo buscan proteger
+                    lo
+                    esencial, el canon.
+                  </p>
+                </div>
             </div>
           </swiper-slide>
           <swiper-slide class="py-10 px-2  h-auto">
@@ -164,9 +165,6 @@
               </div>
 
               <div class="mt-auto">
-                <p class="text-size14 text-gray-400 italic mb-4">Tomador: Propietario<br>Máximo valor del canon COP$:
-                  Sin
-                  límite</p>
                 <button (click)="onQuoteClick()"
                   [ngClass]="planSeleccionado === 'balance' ? 'bg-[#4FC0B0]' : 'bg-[#BCC3CF]'"
                   class="w-full text-white font-bold py-4 rounded-xl mb-3  text-size16 transition-colors duration-300">
@@ -227,9 +225,6 @@
               </div>
 
               <div class="mt-auto">
-                <p class="text-size14 text-gray-400 italic mb-4">Tomador: Propietario<br>Máximo valor del canon COP$:
-                  Sin
-                  límite</p>
                 <button (click)="onQuoteClick()"
                   [ngClass]="planSeleccionado === 'cero' ? 'bg-[#4FC0B0]' : 'bg-[#BCC3CF]'"
                   class="w-full text-white font-bold py-4 rounded-xl mb-3 transition-colors duration-300">
