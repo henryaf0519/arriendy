@@ -29,10 +29,7 @@ import { RouterModule } from '@angular/router';
   declarations: [
     HeaderComponent,
     HeroComponent,
-    
-    
     SuraStatsComponent,
-    
   ],
   imports: [
     FooterComponent,

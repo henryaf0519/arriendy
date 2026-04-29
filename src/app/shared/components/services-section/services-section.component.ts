@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { ScrollRevealDirective } from 'src/app/directives/scroll-reveal.directive';
 
 @Component({
   selector: 'app-services-section',
   standalone: true,
-  imports: [CommonModule, ScrollRevealDirective],
+  imports: [CommonModule, ScrollRevealDirective, RouterLink],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './services-section.component.html',
   styleUrls: ['./services-section.component.scss'],

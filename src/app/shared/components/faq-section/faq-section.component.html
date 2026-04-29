@@ -17,7 +17,10 @@
   <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12 mt-16">
 
     <div class="lg:col-span-2">
-      <h3 class="text-size28 font-bold text-blueTwo mb-8">Preguntas Frecuentes</h3>
+      <h3 class="text-size28 font-bold text-blueTwo mb-3">Bienvenidos a nuestra área de SOPORTE.</h3>
+      <p class="text-size16 font-bold text-blueTwo mb-8">Aquí encontrarás fácilmente las preguntas más frecuentes, los
+        canales de atención y accesos rápidos para la activación de servicios, seguimiento a solicitudes y generación de
+        reclamaciones.</p>
 
       <div class="flex flex-col gap-4 w-full">
         @for (item of faqs; track $index) {
@@ -55,21 +58,28 @@
       <div
         class="bg-blueSeven rounded-2xl py-5 px-4 text-white relative overflow-hidden  flex flex-col justify-between w-[255px] h-[234px] ">
         <div>
-          <div class="w-[36px] h-[36px] rounded-xl flex items-center justify-center mb-3"
-            style="background-color: #EF4444; box-shadow: 0 0 10px #EF4444, 0 0 20px #EF4444, inset 0 0 10px #EF4444;">
-            <span class="text-white text-2xl" style="text-shadow: 0 0 5px #fff;"><img src="assets/imgs/warning.svg"
-                alt=""></span>
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-[36px] h-[36px] rounded-xl flex items-center justify-center flex-shrink-0"
+              style="background-color: #EF4444; box-shadow: 0 0 10px #EF4444, 0 0 20px #EF4444, inset 0 0 10px #EF4444;">
+              <span class="text-white text-2xl" style="text-shadow: 0 0 5px #fff;">
+                <img src="assets/imgs/warning.svg" alt="warning">
+              </span>
+            </div>
+
+            <h4 class="text-white font-bold text-size16">Activar Protección</h4>
           </div>
-          <h4 class="text-white font-bold mb-3 text-size16">Activar protección</h4>
+
           <p class="text-white text-size11 mb-1 leading-relaxed opacity-90">
             Si tu inquilino presenta mora o necesitas activar la asistencia legal de SURA, repórtalo inmediatamente.
           </p>
         </div>
 
-        <button
-          class="w-full bg-white text-blueFive text-size14 h-[38px] font-bold  rounded-xl hover:bg-gray-100 transition-colors mt-auto">
-          Reportar Siniestro
-        </button>
+        <a href="https://wa.me/573052969381" target="_blank" class="w-full">
+          <button
+            class="w-full bg-white text-blueFive text-size14 h-[38px] font-bold rounded-xl hover:bg-gray-100 transition-colors mt-auto">
+            Crear Solicitud
+          </button>
+        </a>
       </div>
 
       <div class="bg-grayTen rounded-2xl p-4 w-[255px]">
@@ -79,20 +89,23 @@
         </p>
 
         <div class="space-y-4">
-          <div
-            class=" bg-white h-[47px] p-4 rounded-lg flex items-center gap-4 shadow-sm border border-transparent hover:border-green-100 transition-all cursor-pointer">
-            <div class="w-10 h-10 bg-green rounded-full flex items-center justify-center text-green-500 text-xl">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="lucide lucide-message-circle">
-                <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
-              </svg>
+          <a href="https://wa.me/573052969381" target="_blank" class="block no-underline">
+            <div
+              class="bg-white h-auto p-4 rounded-lg flex items-center gap-4 shadow-sm border border-transparent hover:border-green-100 transition-all cursor-pointer">
+              <div
+                class="w-10 h-10 bg-green rounded-full flex items-center justify-center text-green-500 text-xl flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-message-circle">
+                  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+                </svg>
+              </div>
+              <div>
+                <p class="text-size12 font-bold text-blueFive">WhatsApp</p>
+                <p class="text-size10 text-grayNine">Respuesta en 15 min</p>
+              </div>
             </div>
-            <div>
-              <p class="text-size12 font-bold text-blueFive">WhatsApp</p>
-              <p class="text-size10 text-grayNine">Respuesta en 15 min</p>
-            </div>
-          </div>
+          </a>
 
           <div
             class="bg-white h-[47px] p-4 rounded-lg flex items-center gap-4 shadow-sm border border-transparent hover:border-green-100 transition-all cursor-pointer">
