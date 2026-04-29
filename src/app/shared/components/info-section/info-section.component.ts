@@ -29,28 +29,29 @@ export class InfoSectionComponent implements AfterViewInit {
     {
       title: 'NO SOLO ASEGURAS TU INGRESO MENSUAL',
       desc: 'También las deudas de servicios públicos, cuotas de administración y posibles daños o faltantes a tu inmueble.',
-      icon: 'assets/imgs/coins.svg',
+      icon: 'assets/imgs/home.svg',
     },
     {
       title: 'OBTIENES ASISTENCIA DOMICILIARIA',
       desc: 'Sura envía especialistas para atender emergencias de plomería, electricidad, cerrajería, vidrios y vigilancia.',
-      icon: 'assets/imgs/coins.svg',
+      icon: 'assets/imgs/domicilio.svg',
     },
     {
       title: 'ACOMPAÑAMIENTO LEGAL INCLUIDO',
       desc: 'Verificación de contrato y orientación legal en derecho civil, familiar, penal, administrativo y laboral.',
-      icon: 'assets/imgs/coins.svg',
-    },
-    {
-      title: 'PROTECCIÓN ANTE DAÑOS Y FALTANTES',
-      desc: 'Garantía de que no asumirás pérdidas por daños o faltantes en los elementos fijos de tu propiedad al recibirla.',
-      icon: 'assets/imgs/coins.svg',
+      icon: 'assets/imgs/legal.svg',
     },
     {
       title: 'RESTITUCIÓN DEL INMUEBLE',
       desc: 'Sura asume todo el proceso jurídico o extrajudicial para recuperar tu propiedad sin límite de meses.',
-      icon: 'assets/imgs/coins.svg',
+      icon: 'assets/imgs/restitucion.svg',
     },
+    {
+      title: 'PROTECCIÓN ANTE DAÑOS Y FALTANTES',
+      desc: 'Garantía de que no asumirás pérdidas por daños o faltantes en los elementos fijos de tu propiedad al recibirla.',
+      icon: 'assets/imgs/proteccion.svg',
+    },
+    
   ];
 
   ngAfterViewInit() {
